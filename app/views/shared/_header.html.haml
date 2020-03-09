@@ -5,3 +5,5 @@
   .header__search
     %input.searchWord{:name => "keyword", :placeholder => "キーワードを入力してください", :type => "keyword", :value => ""}/
   .header__user
+    = link_to "https://www.amazon.com", class: "userIcon" do
+      %i.fas.fa-user.fa-2x

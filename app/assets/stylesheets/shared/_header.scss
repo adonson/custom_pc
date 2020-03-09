@@ -23,5 +23,13 @@
       margin-top:35px;
     }
   }
-  &__user{}
+  &__user{
+    .userIcon{
+      color:#666666;
+      i{
+        margin-left:80px;
+        margin-top:40px;
+      }
+    }
+  }
 }
