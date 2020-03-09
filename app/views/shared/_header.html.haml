@@ -1,1 +1,7 @@
-aaaaaa
+.header
+  .header__logo
+    = link_to root_path do
+      = image_tag "main_logo_head.png", class: "headLogo"
+  .header__search
+    %input.searchWord{:name => "keyword", :placeholder => "キーワードを入力してください", :type => "keyword", :value => ""}/
+  .header__user
