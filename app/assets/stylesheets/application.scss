@@ -1,5 +1,12 @@
 @import 'top/top';
+@import "./reset";
+@import 'shared/header';
 
+// font-awesome用
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// aタグは全て下線がないように設定
 *{
   text-decoration: none;
 }
