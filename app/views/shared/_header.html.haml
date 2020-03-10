@@ -10,7 +10,7 @@
         %i.fas.fa-user.fa-2x
     .header__user__option
       -if user_signed_in?
-        = link_to user_path(current_user.id), class: "header__mypage" do
+        = link_to root_path, class: "header__mypage" do
           = current_user.username
         = link_to destroy_user_session_path,method: :delete, class: "header__register" do
           ログアウト
