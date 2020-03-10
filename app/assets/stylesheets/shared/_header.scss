@@ -24,11 +24,17 @@
     }
   }
   &__user{
-    .userIcon{
-      color:#666666;
+    margin-top:40px;
+    margin-left:30px;
+    &__icon{
+      margin-left:50px;
       i{
-        margin-left:80px;
-        margin-top:40px;
+        color:#666666;
+      }
+    }
+    &__option{
+      a{
+        color:#666666;
       }
     }
   }
