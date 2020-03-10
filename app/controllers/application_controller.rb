@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-  class ApplicationController < ActionController::Base
     before_action :configure_permitted_parameters, if: :devise_controller?
     # before_action :authenticate_user!, except: [:index, :show, :search]
   
@@ -10,9 +9,8 @@ class ApplicationController < ActionController::Base
   
     protected
   
-    # 入力フォームからアカウント名情報をDBに保存するために追加
+    # 登録画面のストロングパロメーター
     def configure_permitted_parameters
-      devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
+      devise_parameter_sanitizer.permit(:sign_up, keys: [:username])
     end
-  end
 end

@@ -5,5 +5,17 @@
   .header__search
     %input.searchWord{:name => "keyword", :placeholder => "キーワードを入力してください", :type => "keyword", :value => ""}/
   .header__user
-    = link_to "https://www.amazon.com", class: "userIcon" do
-      %i.fas.fa-user.fa-2x
+    .header__user__icon
+      = link_to "https://www.amazon.com", class: "userIcon" do
+        %i.fas.fa-user.fa-2x
+    .header__user__option
+      -if user_signed_in?
+        = link_to user_path(current_user.id), class: "header__mypage" do
+          = current_user.username
+        = link_to destroy_user_session_path,method: :delete, class: "header__register" do
+          ログアウト
+      -else
+        = link_to new_user_session_path,class: "header__login" do
+          ログイン
+        = link_to new_user_registration_path, class: "header__register" do
+          新規登録
