@@ -35,8 +35,8 @@ Things you may want to cover:
 |socket_id|references|foreign_key:true|
 |developer_id|references|foreign_key:true|
 ### association
-- belongs_to :developers
-- belongs_to :sockets
+- belongs_to :developer
+- belongs_to :socket
 ## motherboard table
 
 ## memories table
