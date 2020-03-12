@@ -28,6 +28,7 @@ Things you may want to cover:
 |clockspeed|decimal||
 |turbospeed|decimal||
 |tdp|integer||
+|gpu|integer||
 |image|string||
 |release_g|date||
 |release_ja|date||
