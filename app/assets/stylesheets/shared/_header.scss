@@ -16,11 +16,59 @@
     }
   }
   &__search{
-    .searchWord{
-      width:55vw;
-      min-width:400px;
-      height:35px;
-      margin-top:35px;
+    &__bar{
+      .searchWord{
+        width:55vw;
+        min-width:400px;
+        height:35px;
+        margin-top:35px;
+      }
+    }
+    &__list{
+      display: flex;
+      margin-top:10px;
+      &__cpu{
+        margin-left:20px;
+        .cpuList{
+          color:#666666;
+        }
+      }
+      &__mb{
+        margin-left:20px;
+        .mbList{
+          color:#666666;
+        }
+      }
+      &__memory{
+        margin-left:20px;
+        .memoryList{
+          color:#666666;
+        }
+      }
+      &__gpu{
+        margin-left:20px;
+        .gpuList{
+          color:#666666;
+        }
+      }
+      &__case{
+        margin-left:20px;
+        .caseList{
+          color:#666666;
+        }
+      }
+      &__pu{
+        margin-left:20px;
+        .puList{
+          color:#666666;
+        }
+      }
+      &__storage{
+        margin-left:20px;
+        .storageList{
+          color:#666666;
+        }
+      }
     }
   }
   &__user{

@@ -3,7 +3,30 @@
     = link_to root_path do
       = image_tag "main_logo_head.png", class: "headLogo"
   .header__search
-    %input.searchWord{:name => "keyword", :placeholder => "キーワードを入力してください", :type => "keyword", :value => ""}/
+    .header__search__bar
+      %input.searchWord{:name => "keyword", :placeholder => "キーワードを入力してください", :type => "keyword", :value => ""}/
+    .header__search__list
+      .header__search__list__cpu
+        = link_to "https://kakaku.com/pc/cpu/", class: "cpuList" do
+          CPU
+      .header__search__list__mb
+        = link_to "https://kakaku.com/pc/motherboard/", class: "mbList" do
+          マザーボード
+      .header__search__list__memory
+        = link_to "https://kakaku.com/pc/pc-memory/", class: "memoryList" do
+          メモリー
+      .header__search__list__gpu
+        = link_to "https://kakaku.com/pc/videocard/", class: "gpuList" do
+          グラフィックボード
+      .header__search__list__case
+        = link_to "https://kakaku.com/pc/pc-case/", class: "caseList" do
+          PCケース
+      .header__search__list__pu
+        = link_to "https://kakaku.com/pc/power-supply/", class: "puList" do
+          電源ユニット
+      .header__search__list__storage
+        = link_to "https://kakaku.com/pc/ssd/", class: "storageList" do
+          ストレージ
   .header__user
     .header__user__icon
       = link_to "https://www.amazon.com", class: "userIcon" do
