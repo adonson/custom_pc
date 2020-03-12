@@ -21,8 +21,8 @@ ActiveRecord::Schema.define(version: 2020_03_12_063104) do
     t.integer "price"
     t.integer "core"
     t.integer "thread"
-    t.decimal "clockspeed", precision: 10
-    t.decimal "turbospeed", precision: 10
+    t.decimal "clockspeed", precision: 3, scale: 1
+    t.decimal "turbospeed", precision: 3, scale: 1
     t.integer "tdp"
     t.integer "gpu"
     t.string "image"
