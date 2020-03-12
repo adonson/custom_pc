@@ -7,7 +7,7 @@
       %input.searchWord{:name => "keyword", :placeholder => "キーワードを入力してください", :type => "keyword", :value => ""}/
     .header__search__list
       .header__search__list__cpu
-        = link_to "https://kakaku.com/pc/cpu/", class: "cpuList" do
+        = link_to cpu_index_path, class: "cpuList" do
           CPU
       .header__search__list__mb
         = link_to "https://kakaku.com/pc/motherboard/", class: "mbList" do

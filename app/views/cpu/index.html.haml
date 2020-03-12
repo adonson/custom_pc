@@ -1,0 +1,6 @@
+インデックス
+.cpu
+  .cpu__name
+    - @cpus.each do |cpu|
+      = link_to cpu_path(cpu.id) do
+        - cpu.name
