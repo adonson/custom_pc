@@ -32,7 +32,7 @@ Things you may want to cover:
 |image|string||
 |release_g|date||
 |release_ja|date||
-|socket_id|references|foreign_key:true|
+|cpu_socket_id|references|foreign_key:true|
 |developer_id|references|foreign_key:true|
 ### association
 - belongs_to :developer

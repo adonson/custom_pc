@@ -12,8 +12,8 @@ class CreateCpus < ActiveRecord::Migration[5.2]
       t.string     :image
       t.date       :release_g
       t.date       :release_ja
-      t.references :socket_id,    foreign_key:true
-      t.references :developer_id, foreign_key:true
+      t.references :cpu_socket,    foreign_key:true
+      t.references :developer, foreign_key:true
       t.timestamps
     end
   end
