@@ -1,7 +1,11 @@
 @import 'top/top';
-@import "./reset";
+@import './reset';
 @import 'shared/header';
 @import 'shared/footer';
+
+// CPU
+@import'cpu/index';
+@import'cpu/show';
 
 // font-awesome用
 @import "font-awesome-sprockets";

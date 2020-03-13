@@ -1,0 +1,11 @@
+.show{
+  .cpu{
+    &__name{}
+    &__image{
+      img.image{
+        width:160px;
+        height:120px;
+      }
+    }
+  }
+}
