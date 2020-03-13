@@ -1,0 +1,33 @@
+.index{
+  .cpu{
+    &__block{
+      width:250px;
+      height:280px;
+      background-color:white;
+      box-shadow: 0 0 8px whitesmoke;
+      &__image{
+        a{
+          img.image{
+            margin:0,auto;
+            width:226px;
+            height:171px;
+            margin-left:14px;
+            margin-top:15px;
+          }
+        }
+      } 
+      &__developer{
+        margin-left:14px
+      }
+      &__name{
+        margin-left:14px
+      }
+      &__price{
+        margin-left:14px;
+        font-family: Verdana;
+        font-weight:bold;
+        color:red;
+      }
+    }
+  }
+}

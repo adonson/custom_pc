@@ -1,7 +1,16 @@
 = render "shared/header" # ヘッダー呼び出し
-.cpu
-  .cpu__name
-    - @cpus.each do |cpu|
-      = link_to cpu_path(cpu.id) do
-        - cpu.name
+.index
+  .cpu
+    .cpu__block
+      - @cpus.each do |cpu|
+        .cpu__block__image
+          = link_to cpu_path(cpu.id) do
+            - image_tag "#{cpu.image}",class: "image"
+        .cpu__block__developer    
+          = cpu.developer.name
+        .cpu__block__name
+          = cpu.name
+        .cpu__block__price
+          = "￥#{cpu.price.to_s(:delimited)}（参考価格）"
+
 = render "shared/footer" # フッター呼び出し
