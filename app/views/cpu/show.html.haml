@@ -1,4 +1,4 @@
-ショー
+= render "shared/header" # ヘッダー呼び出し
 .cpu
   .cpu__name
     = @cpus.name
@@ -12,3 +12,5 @@
     = "クロック周波数 #{@cpus.clockspeed}GHz"
   .cpu__turbospeed
     = "最大動作クロック周波数 #{@cpus.turbospeed}GHz"
+
+= render "shared/footer" # フッター呼び出し

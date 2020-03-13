@@ -1,6 +1,7 @@
-インデックス
+= render "shared/header" # ヘッダー呼び出し
 .cpu
   .cpu__name
     - @cpus.each do |cpu|
       = link_to cpu_path(cpu.id) do
         - cpu.name
+= render "shared/footer" # フッター呼び出し
