@@ -12,7 +12,8 @@ class CreateCpus < ActiveRecord::Migration[5.2]
       t.string      :image
       t.date        :release_g
       t.date        :release_ja
-      t.timestamps
+      t.integer     :r15
+      t.integer     :r20
     end
   end
 end

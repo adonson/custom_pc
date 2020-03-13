@@ -28,8 +28,8 @@ ActiveRecord::Schema.define(version: 2020_03_12_063104) do
     t.string "image"
     t.date "release_g"
     t.date "release_ja"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer "r15"
+    t.integer "r20"
     t.integer "developer_id"
     t.integer "cpu_socket_id"
   end
