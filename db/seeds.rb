@@ -1,3 +1,5 @@
+# ーーーーーーforeign_keyーーーーーー
+
 # Developer.create!(
 #  [ 
 #   {id: 1, name: 'INTEL'},
@@ -5,6 +7,7 @@
 #   {id: 3, name: 'NVIDIA'}
 #  ]
 # )
+
 # CpuSocket.create!(
 #  [ 
 #   {id: 1, name: 'LGA3647'},
@@ -25,3 +28,35 @@
 #   {id: 16, name: 'Socket AM3+'}
 #  ]
 # )
+
+# Series.create!(
+#  [ 
+#   {id: 1, name: 'Xeon'},
+#   {id: 2, name: 'Xeon Platinum'},
+#   {id: 3, name: 'Xeon Gold'},
+#   {id: 4, name: 'Xeon Silver'},
+#   {id: 5, name: 'Xeon Bronze'},
+#   {id: 6, name: 'Core i9'},
+#   {id: 7, name: 'Core i7'},
+#   {id: 8, name: 'Core i5'},
+#   {id: 9, name: 'Core i3'},
+#   {id: 10, name: 'Pentium'},
+#   {id: 11, name: 'EPYC'},
+#   {id: 12, name: 'Ryzen Threadripper'},
+#   {id: 13, name: 'Ryzen 9'},
+#   {id: 14, name: 'Ryzen 7'},
+#   {id: 15, name: 'Ryzen 5'},
+#   {id: 16, name: 'Ryzen 3'},
+#   {id: 17, name: 'Athlon'}
+#  ]
+# )
+
+# ーーーーーーーーーーーーーー
+
+Cpu.create!(
+ [ 
+  # {id: 1, name: 'Ryzen 5 2600 BOX', price: 12980, core: 6, thread: 12, clockspeed: 3.4, turbospeed: 3.9, tdp: 65, image: '2600x', gpu: '', release_g: 20180419, release_ja: 20180419, r15: 1298, r20: 2798, developer_id: 2, cpu_socket_id: 8, series_id: 15},
+  {id: 2, name: '', price: , core: , thread: , clockspeed: , turbospeed: , tdp: , image: '', gpu: '', release_g: , release_ja: , r15: , r20: , developer_id: , cpu_socket_id: , series_id: }
+
+ ]
+)

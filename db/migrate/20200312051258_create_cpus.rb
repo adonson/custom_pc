@@ -8,7 +8,7 @@ class CreateCpus < ActiveRecord::Migration[5.2]
       t.decimal     :clockspeed, precision: 3, scale: 1
       t.decimal     :turbospeed, precision: 3, scale: 1
       t.integer     :tdp
-      t.integer     :gpu
+      t.string      :gpu
       t.string      :image
       t.date        :release_g
       t.date        :release_ja
