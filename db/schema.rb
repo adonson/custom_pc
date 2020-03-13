@@ -10,7 +10,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_10_054812) do
+ActiveRecord::Schema.define(version: 2020_03_13_112749) do
+
+  create_table "cpu_sockets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+  end
+
+  create_table "cpus", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "price"
+    t.integer "core"
+    t.integer "thread"
+    t.decimal "clockspeed", precision: 3, scale: 1
+    t.decimal "turbospeed", precision: 3, scale: 1
+    t.integer "tdp"
+    t.string "gpu"
+    t.string "image"
+    t.date "release_g"
+    t.date "release_ja"
+    t.integer "r15"
+    t.integer "r20"
+    t.integer "developer_id"
+    t.integer "cpu_socket_id"
+    t.integer "series_id"
+  end
+
+  create_table "developers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+  end
+
+  create_table "series", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+  end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
