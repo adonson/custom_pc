@@ -1,8 +1,8 @@
 = render "shared/header" # ヘッダー呼び出し
 .index
   .cpu
-    .cpu__block
-      - @cpus.each do |cpu|
+    - @cpus.each do |cpu|
+      .cpu__block
         .cpu__block__image
           = link_to cpu_path(cpu.id) do
             - image_tag "#{cpu.image}",class: "image"

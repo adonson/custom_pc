@@ -1,10 +1,13 @@
 .index{
   .cpu{
+    display:flex;
+    justify-content:start;
     &__block{
       width:250px;
       height:280px;
       background-color:white;
       box-shadow: 0 0 8px whitesmoke;
+
       &__image{
         a{
           img.image{
