@@ -1,5 +1,4 @@
-class CpuSocket < ApplicationRecord
-  has_many  :cpu
+class MemoryType < ApplicationRecord
   has_many  :mother_board
   validates :name, presence:true
 end

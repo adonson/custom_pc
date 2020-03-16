@@ -55,14 +55,14 @@ Things you may want to cover:
 |mini_display_port|integer||
 |hdmi|integer||
 |usb_type_c|integer||
-|usb3.1|integer||
-|usb3.0|integer||
-|usb2.0|integer||
+|usb3_1|integer||
+|usb3_0|integer||
+|usb2_0|integer||
 |led_id|references|foreign_key:true|
 |pci_express_16x|integer||
 |pci_express_8x|integer||
 |pci_express_4x|integer||
-|pci_express_16x|integer||
+|pci_express_1x|integer||
 |sata_slot|integer||
 |m2_slot|integer||
 ### association

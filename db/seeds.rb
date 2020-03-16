@@ -1,5 +1,4 @@
 # ーーーーーーforeign_keyーーーーーー
-
 Developer.create!(
  [ 
   {id: 1, name: 'INTEL'},
@@ -51,8 +50,127 @@ Series.create!(
  ]
 )
 
-# ーーーーーーーーーーーーーー
+Led.create!(
+  [
+    {id: 1, name: 'Aura Sync'},
+    {id: 2, name: 'Mystic Light'},
+    {id: 3, name: 'RGB FUSION'},
+  ]
+)
 
+ChipSet.create!(
+  [
+    {id: 1, name: 'Z390'},
+    {id: 2, name: 'Z370'},
+    {id: 3, name: 'H370'},
+    {id: 4, name: 'B365'},
+    {id: 5, name: 'B360'},
+    {id: 6, name: 'H310'},
+    {id: 7, name: 'X299'},
+    {id: 8, name: 'Z270'},
+    {id: 9, name: 'H270'},
+    {id: 10, name: 'B250'},
+    {id: 11, name: 'X99'},
+    {id: 12, name: 'X79'},
+    {id: 13, name: 'Z170'},
+    {id: 14, name: 'Z97'},
+    {id: 15, name: 'TRX40'},
+    {id: 16, name: 'X570'},
+    {id: 17, name: 'X470'},
+    {id: 18, name: 'X399'},
+    {id: 19, name: 'X370'},
+    {id: 20, name: 'B450'},
+    {id: 21, name: 'B350'},
+    {id: 22, name: 'A320'},
+    {id: 23, name: 'A88X'},
+  ]
+)
+
+MemoryType.create!(
+ [ 
+  {id: 1, name: 'DIMM DDR4'},
+  {id: 2, name: 'DIMM DDR3/DDR4'},
+  {id: 3, name: 'DIMM DDR3'},
+  {id: 4, name: 'DIMM DDR3/DDR3L'},
+  {id: 5, name: 'DIMM DDR2/DDR3'},
+  {id: 6, name: 'DIMM DDR3L'},
+  {id: 7, name: 'DIMM DDR2'},
+  {id: 8, name: 'DIMM DDR'},
+ ]
+)
+
+FormFactor.create!(
+ [ 
+  {id: 1, name: 'ATX'},
+  {id: 2, name: 'BTX'},
+  {id: 3, name: 'CEB'}
+  {id: 4, name: 'Extended'},
+  {id: 5, name: 'Flex ATX'},
+  {id: 6, name: 'Micro ATX'}
+  {id: 7, name: 'Micro BTX'},
+  {id: 8, name: 'Mini ITX'},
+  {id: 9, name: 'Mini STX'},
+  {id: 10, name: 'Nano ITX'},
+  {id: 11, name: 'Proprietary'},
+  {id: 12, name: 'SSI'},
+  {id: 13, name: 'SSI EEB'},
+  {id: 14, name: 'XL-ATX'},
+  {id: 15, name: 'Thin Mini-ITX'},
+  {id: 16, name: 'MiniATX'},
+ ]
+)
+
+Maker.create!(
+ [ 
+  {id: 1, name: 'ABIT'},
+  {id: 2, name: 'ALBATRON'},
+  {id: 3, name: 'AOPEN'}
+  {id: 4, name: 'ASRock'},
+  {id: 5, name: 'ASUS'},
+  {id: 6, name: 'BIOSTAR'}
+  {id: 7, name: 'CHAINTECH'},
+  {id: 8, name: 'Colorful'},
+  {id: 9, name: 'COMMELL'},
+  {id: 10, name: 'DFI'},
+  {id: 11, name: 'ECS'},
+  {id: 12, name: 'ELSA'},
+  {id: 13, name: 'EPOX'},
+  {id: 14, name: 'EVGA'},
+  {id: 15, name: 'FFF SMART LIFE CONNECTED'},
+  {id: 16, name: 'FIC'},
+  {id: 17, name: 'EPOX'},
+  {id: 18, name: 'EVGA'},
+  {id: 19, name: 'FFF SMART LIFE CONNECTED'},
+  {id: 20, name: 'FIC'},
+  {id: 21, name: 'FOXCONN'},
+  {id: 22, name: 'GIADA'},
+  {id: 23, name: 'GIGAGYTE'},
+  {id: 24, name: 'iBASE'},
+  {id: 25, name: 'Inno 3D'},
+  {id: 26, name: 'INTEL'},
+  {id: 27, name: 'IWILL'},
+  {id: 28, name: 'J&W'},
+  {id: 29, name: 'JETWAY'},
+  {id: 30, name: 'LEADTEC'},
+  {id: 31, name: 'MSI'},
+  {id: 32, name: 'NZXT'},
+  {id: 33, name: 'PC CHIPS'},
+  {id: 34, name: 'PFU'},
+  {id: 35, name: 'PowerColor'},
+  {id: 36, name: 'RIOWORKS'},
+  {id: 37, name: 'SAPPHIRE'},
+  {id: 38, name: 'SOLTEK'},
+  {id: 39, name: 'SUPERMICRO'},
+  {id: 40, name: 'TYAN'},
+  {id: 41, name: 'VIA'},
+  {id: 42, name: 'XFX'},
+  {id: 43, name: 'ZOTAC'},
+  {id: 44, name: '玄人志向'},
+ ]
+)
+# ーーーーーーforeign_key(END)ーーーーーー
+
+# ーーーーーーmain_tableーーーーーーーーー
 Cpu.create!(
  [ 
   {id: 1, name: 'Ryzen 5 2600 BOX', price: 12980, core: 6, thread: 12, clockspeed: 3.4, turbospeed: 3.9, tdp: 65, image: '2600x', gpu: '', release_g: 20180419, release_ja: 20180419, r15: 1298, r20: 2798, developer_id: 2, cpu_socket_id: 8, series_id: 15},
@@ -77,11 +195,6 @@ Cpu.create!(
 
   {id: 11, name: 'Core i9 10900X BOX', price: 76000, core: 10, thread: 20, clockspeed: 3.7, turbospeed: 4.7, tdp: 165, image: '10900x', gpu: '', release_g: 20191129, release_ja: 20191129, r15: 2358, r20: 5570, developer_id: 1, cpu_socket_id: 2, series_id: 6},
 
-  # {id: 2, name: 'Core i9 10900X BOX', price: 40000, core: 8, thread: 16, clockspeed: 3.6, turbospeed: 4.4, tdp: 65, image: '3700x', gpu: '', release_g: 20180419, release_ja: 20180419, r15: , r20: , developer_id: , cpu_socket_id: , series_id: },
-
-
-
-
-
  ]
 )
+# ーーーーーーmain_table(END)ーーーーーー
