@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   end
 
   resources :cpu, only: [:index, :show]
+  resources :mother_board, only: [:index, :show]
 end
