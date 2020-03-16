@@ -101,6 +101,7 @@ Things you may want to cover:
 |name|string|unique: true,null: false|
 ### association
 - has_many :cpu
+- has_many :mother_boards
 
 ## chip_sets table
 |Column|Type|Options|
