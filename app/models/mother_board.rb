@@ -4,5 +4,6 @@ class MotherBoard < ApplicationRecord
   belongs_to :cpu_socket
   belongs_to :memory_type
   belongs_to :led
+  belongs_to :maker
   validates  :name, presence:true
 end
