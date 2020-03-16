@@ -64,23 +64,3 @@
 
 
 = render "shared/footer" # フッター呼び出し
-
--# .cpu__name
--#   = @cpus.name
--# .cpu__price
--#   = "￥#{@cpus.price.to_s(:delimited)}"
--# .cpu__core
--#   = "コア数 #{@cpus.core}"
--# .cpu__thread
--#   = "スレッド数 #{@cpus.thread}"
--# .cpu__clockspeed
--#   = "クロック周波数 #{@cpus.clockspeed}GHz"
--# .cpu__turbospeed
--#   = "最大動作クロック周波数 #{@cpus.turbospeed}GHz"
--# .cpu__image
--#   = image_tag "#{@cpus.image}",class: "image"
--# .cpu__developer
--#   = @cpus.developer.name
--# .cpu__socket
--#   = @cpus.cpu_socket.name
--# .cpu__gpu
