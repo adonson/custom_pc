@@ -1,5 +1,4 @@
 # ーーーーーーforeign_keyーーーーーー
-
 Developer.create!(
  [ 
   {id: 1, name: 'INTEL'},
@@ -51,8 +50,16 @@ Series.create!(
  ]
 )
 
-# ーーーーーーーーーーーーーー
+Led.create!(
+  [
+    {id: 1, name: 'Aura Sync'},
+    {id: 2, name: 'Mystic Light'},
+    {id: 3, name: 'RGB FUSION'},
+  ]
+)
+# ーーーーーーforeign_key(END)ーーーーーー
 
+# ーーーーーーmain_tableーーーーーーーーー
 Cpu.create!(
  [ 
   {id: 1, name: 'Ryzen 5 2600 BOX', price: 12980, core: 6, thread: 12, clockspeed: 3.4, turbospeed: 3.9, tdp: 65, image: '2600x', gpu: '', release_g: 20180419, release_ja: 20180419, r15: 1298, r20: 2798, developer_id: 2, cpu_socket_id: 8, series_id: 15},
@@ -77,11 +84,6 @@ Cpu.create!(
 
   {id: 11, name: 'Core i9 10900X BOX', price: 76000, core: 10, thread: 20, clockspeed: 3.7, turbospeed: 4.7, tdp: 165, image: '10900x', gpu: '', release_g: 20191129, release_ja: 20191129, r15: 2358, r20: 5570, developer_id: 1, cpu_socket_id: 2, series_id: 6},
 
-  # {id: 2, name: 'Core i9 10900X BOX', price: 40000, core: 8, thread: 16, clockspeed: 3.6, turbospeed: 4.4, tdp: 65, image: '3700x', gpu: '', release_g: 20180419, release_ja: 20180419, r15: , r20: , developer_id: , cpu_socket_id: , series_id: },
-
-
-
-
-
  ]
 )
+# ーーーーーーmain_table(END)ーーーーーー
