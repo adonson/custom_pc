@@ -119,6 +119,55 @@ FormFactor.create!(
   {id: 16, name: 'MiniATX'},
  ]
 )
+
+Maker.create!(
+ [ 
+  {id: 1, name: 'ABIT'},
+  {id: 2, name: 'ALBATRON'},
+  {id: 3, name: 'AOPEN'}
+  {id: 4, name: 'ASRock'},
+  {id: 5, name: 'ASUS'},
+  {id: 6, name: 'BIOSTAR'}
+  {id: 7, name: 'CHAINTECH'},
+  {id: 8, name: 'Colorful'},
+  {id: 9, name: 'COMMELL'},
+  {id: 10, name: 'DFI'},
+  {id: 11, name: 'ECS'},
+  {id: 12, name: 'ELSA'},
+  {id: 13, name: 'EPOX'},
+  {id: 14, name: 'EVGA'},
+  {id: 15, name: 'FFF SMART LIFE CONNECTED'},
+  {id: 16, name: 'FIC'},
+  {id: 17, name: 'EPOX'},
+  {id: 18, name: 'EVGA'},
+  {id: 19, name: 'FFF SMART LIFE CONNECTED'},
+  {id: 20, name: 'FIC'},
+  {id: 21, name: 'FOXCONN'},
+  {id: 22, name: 'GIADA'},
+  {id: 23, name: 'GIGAGYTE'},
+  {id: 24, name: 'iBASE'},
+  {id: 25, name: 'Inno 3D'},
+  {id: 26, name: 'INTEL'},
+  {id: 27, name: 'IWILL'},
+  {id: 28, name: 'J&W'},
+  {id: 29, name: 'JETWAY'},
+  {id: 30, name: 'LEADTEC'},
+  {id: 31, name: 'MSI'},
+  {id: 32, name: 'NZXT'},
+  {id: 33, name: 'PC CHIPS'},
+  {id: 34, name: 'PFU'},
+  {id: 35, name: 'PowerColor'},
+  {id: 36, name: 'RIOWORKS'},
+  {id: 37, name: 'SAPPHIRE'},
+  {id: 38, name: 'SOLTEK'},
+  {id: 39, name: 'SUPERMICRO'},
+  {id: 40, name: 'TYAN'},
+  {id: 41, name: 'VIA'},
+  {id: 42, name: 'XFX'},
+  {id: 43, name: 'ZOTAC'},
+  {id: 44, name: '玄人志向'},
+ ]
+)
 # ーーーーーーforeign_key(END)ーーーーーー
 
 # ーーーーーーmain_tableーーーーーーーーー
