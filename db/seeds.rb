@@ -103,10 +103,10 @@ FormFactor.create!(
  [ 
   {id: 1, name: 'ATX'},
   {id: 2, name: 'BTX'},
-  {id: 3, name: 'CEB'}
+  {id: 3, name: 'CEB'},
   {id: 4, name: 'Extended'},
   {id: 5, name: 'Flex ATX'},
-  {id: 6, name: 'Micro ATX'}
+  {id: 6, name: 'Micro ATX'},
   {id: 7, name: 'Micro BTX'},
   {id: 8, name: 'Mini ITX'},
   {id: 9, name: 'Mini STX'},
@@ -124,10 +124,10 @@ Maker.create!(
  [ 
   {id: 1, name: 'ABIT'},
   {id: 2, name: 'ALBATRON'},
-  {id: 3, name: 'AOPEN'}
+  {id: 3, name: 'AOPEN'},
   {id: 4, name: 'ASRock'},
   {id: 5, name: 'ASUS'},
-  {id: 6, name: 'BIOSTAR'}
+  {id: 6, name: 'BIOSTAR'},
   {id: 7, name: 'CHAINTECH'},
   {id: 8, name: 'Colorful'},
   {id: 9, name: 'COMMELL'},
