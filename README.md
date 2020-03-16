@@ -37,8 +37,42 @@ Things you may want to cover:
 ### association
 - belongs_to :developer
 - belongs_to :socket
-## motherboard table
-
+## mother_board table
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null:false|
+|price|integer||
+|maker_id|references|foreign_key:true|
+|chip_set_id|references|foreign_key:true|
+|form_factor_id|references|foreign_key:true|
+|cpu_socket_id|references|foreign_key:true|
+|form_factor_id|references|foreign_key:true|
+|memory_type_id|references|foreign_key:true|
+|memory_slot|integer||
+|sli|integer||
+|crossfire|integer||
+|display_port|integer||
+|mini_display_port|integer||
+|hdmi|integer||
+|usb_type_c|integer||
+|usb3.1|integer||
+|usb3.0|integer||
+|usb2.0|integer||
+|led_id|references|foreign_key:true|
+|pci_express_16x|integer||
+|pci_express_8x|integer||
+|pci_express_4x|integer||
+|pci_express_16x|integer||
+|sata_slot|integer||
+|m2_slot|integer||
+### association
+- belongs_to :maker
+- belongs_to :chip_set
+- belongs_to :form_factor
+- belongs_to :cpu_cocket
+- belongs_to :form_factor
+- belongs_to :memory_type
+- belongs_to :led
 ## memories table
 
 ## videocards table
@@ -55,10 +89,14 @@ Things you may want to cover:
 - has_many :cpu
 
 ## makers table
+|Column|Type|Options|
+|------|----|-------|
 |name|string|unique: true,null: false|
 ### association
-
-## sockets table
+- has_many :mother_boards
+## cpu_sockets table
+|Column|Type|Options|
+|------|----|-------|
 |name|string|unique: true,null: false|
 ### association
 - has_many :cpu
