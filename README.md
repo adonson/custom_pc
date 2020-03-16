@@ -94,12 +94,41 @@ Things you may want to cover:
 |name|string|unique: true,null: false|
 ### association
 - has_many :mother_boards
+
 ## cpu_sockets table
 |Column|Type|Options|
 |------|----|-------|
 |name|string|unique: true,null: false|
 ### association
 - has_many :cpu
+
+## chip_sets table
+|Column|Type|Options|
+|------|----|-------|
+|name|string|unique: true,null: false|
+### association
+- has_many :mother_boards
+
+## form_factors table
+|Column|Type|Options|
+|------|----|-------|
+|name|string|unique: true,null: false|
+### association
+- has_many :mother_boards
+
+## memory_types table
+|Column|Type|Options|
+|------|----|-------|
+|name|string|unique: true,null: false|
+### association
+- has_many :mother_boards
+
+## leds table
+|Column|Type|Options|
+|------|----|-------|
+|name|string|unique: true,null: false|
+### association
+- has_many :mother_boards
 
 ## 「developer」と「maker」について
 前者はCPU、グラフィックボードなどにおけるソフト開発、後者はハード開発を想定
