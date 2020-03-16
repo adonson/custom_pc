@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_13_112749) do
+ActiveRecord::Schema.define(version: 2020_03_16_113954) do
+
+  create_table "chip_sets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+  end
 
   create_table "cpu_sockets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -37,6 +41,46 @@ ActiveRecord::Schema.define(version: 2020_03_13_112749) do
 
   create_table "developers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
+  end
+
+  create_table "form_factors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+  end
+
+  create_table "leds", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+  end
+
+  create_table "memory_types", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+  end
+
+  create_table "mother_boards", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "price"
+    t.string "image"
+    t.integer "memory_slot"
+    t.integer "max_memory_value"
+    t.integer "sli"
+    t.integer "crossfire"
+    t.integer "display_port"
+    t.integer "mini_display_port"
+    t.integer "hdmi"
+    t.integer "usb_type_c"
+    t.integer "usb3_1"
+    t.integer "usb3_0"
+    t.integer "usb2_0"
+    t.integer "pci_express_16x"
+    t.integer "pci_express_8x"
+    t.integer "pci_express_4x"
+    t.integer "pci_express_1x"
+    t.integer "sata_slot"
+    t.integer "m2_slot"
+    t.integer "chip_set_id"
+    t.integer "form_factor_id"
+    t.integer "cpu_socket_id"
+    t.integer "memory_type_id"
+    t.integer "led_id"
   end
 
   create_table "series", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
