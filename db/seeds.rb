@@ -57,6 +57,68 @@ Led.create!(
     {id: 3, name: 'RGB FUSION'},
   ]
 )
+
+ChipSet.create!(
+  [
+    {id: 1, name: 'Z390'},
+    {id: 2, name: 'Z370'},
+    {id: 3, name: 'H370'},
+    {id: 4, name: 'B365'},
+    {id: 5, name: 'B360'},
+    {id: 6, name: 'H310'},
+    {id: 7, name: 'X299'},
+    {id: 8, name: 'Z270'},
+    {id: 9, name: 'H270'},
+    {id: 10, name: 'B250'},
+    {id: 11, name: 'X99'},
+    {id: 12, name: 'X79'},
+    {id: 13, name: 'Z170'},
+    {id: 14, name: 'Z97'},
+    {id: 15, name: 'TRX40'},
+    {id: 16, name: 'X570'},
+    {id: 17, name: 'X470'},
+    {id: 18, name: 'X399'},
+    {id: 19, name: 'X370'},
+    {id: 20, name: 'B450'},
+    {id: 21, name: 'B350'},
+    {id: 22, name: 'A320'},
+    {id: 23, name: 'A88X'},
+  ]
+)
+
+MemoryType.create!(
+ [ 
+  {id: 1, name: 'DIMM DDR4'},
+  {id: 2, name: 'DIMM DDR3/DDR4'},
+  {id: 3, name: 'DIMM DDR3'},
+  {id: 4, name: 'DIMM DDR3/DDR3L'},
+  {id: 5, name: 'DIMM DDR2/DDR3'},
+  {id: 6, name: 'DIMM DDR3L'},
+  {id: 7, name: 'DIMM DDR2'},
+  {id: 8, name: 'DIMM DDR'},
+ ]
+)
+
+FormFactor.create!(
+ [ 
+  {id: 1, name: 'ATX'},
+  {id: 2, name: 'BTX'},
+  {id: 3, name: 'CEB'}
+  {id: 4, name: 'Extended'},
+  {id: 5, name: 'Flex ATX'},
+  {id: 6, name: 'Micro ATX'}
+  {id: 7, name: 'Micro BTX'},
+  {id: 8, name: 'Mini ITX'},
+  {id: 9, name: 'Mini STX'},
+  {id: 10, name: 'Nano ITX'},
+  {id: 11, name: 'Proprietary'},
+  {id: 12, name: 'SSI'},
+  {id: 13, name: 'SSI EEB'},
+  {id: 14, name: 'XL-ATX'},
+  {id: 15, name: 'Thin Mini-ITX'},
+  {id: 16, name: 'MiniATX'},
+ ]
+)
 # ーーーーーーforeign_key(END)ーーーーーー
 
 # ーーーーーーmain_tableーーーーーーーーー
