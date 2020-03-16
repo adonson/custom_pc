@@ -1,5 +1,5 @@
 class CpuController < ApplicationController
-  before_action :authenticate_user!, except: [:show]
+  before_action :authenticate_user!, except: [:index,:show]
 
   def index
     @cpus = Cpu.all
