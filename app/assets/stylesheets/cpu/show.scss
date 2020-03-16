@@ -1,11 +1,85 @@
 .show{
   .cpu{
-    &__name{}
-    &__image{
-      img.image{
-        width:160px;
-        height:120px;
+    &__head{}
+    &__bottom{
+      width:80%;
+      display:flex;
+      &__left{
+        width:50%;
+        &__image{
+          img.image{
+            width:550px;
+            height:420px;
+          }
+        }
+      }
+      &__right{
+        margin-top:90px;
+        .table{
+          table{
+            tr{
+              td{
+                border:solid thin grey;
+              }
+              td.name{
+                background-color:#E0E0E0;
+              }
+              td.p_name{}
+              td.developer{
+                background-color:#E0E0E0;
+              }
+              td.p_developer{}
+              td.series{
+                background-color:#E0E0E0;
+              }
+              td.p_series{}
+              td.tdp{
+                background-color:#E0E0E0;
+              }
+              td.p_tdp{}
+              td.core{
+                background-color:#E0E0E0;
+              }
+              td.p_core{}
+              td.thread{
+                background-color:#E0E0E0;
+              }
+              td.p_thread{}
+              td.clockspeed{
+                background-color:#E0E0E0;
+                // width:180px;
+              }
+              td.p_clockspeed{}
+              td.turbospeed{
+                background-color:#E0E0E0;
+              }
+              td.p_turbospeed{}
+              td.gpu{
+                background-color:#E0E0E0;
+              }
+              td.p_gpu{
+                // width:220px;
+              }
+              td.release_ja{
+                background-color:#E0E0E0;
+              }
+              td.p_release_ja{}
+              td.release_g{
+                background-color:#E0E0E0;
+              }
+              td.p_release_g{}
+              td.r15{
+                background-color:#E0E0E0;}
+              td.p_r15{}
+              td.r20{
+                background-color:#E0E0E0;
+              }
+              td.p_r20{}
+            }
+          }
+        }
       }
     }
-  }
+  } 
 }
+

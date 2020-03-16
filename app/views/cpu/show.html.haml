@@ -1,24 +1,86 @@
 = render "shared/header" # ヘッダー呼び出し
 .show
   .cpu
-    .cpu__name
-      = @cpus.name
-    .cpu__price
-      = "#{@cpus.price.to_s(:delimited)} 円"
-    .cpu__core
-      = "コア数 #{@cpus.core}"
-    .cpu__thread
-      = "スレッド数 #{@cpus.thread}"
-    .cpu__clockspeed
-      = "クロック周波数 #{@cpus.clockspeed}GHz"
-    .cpu__turbospeed
-      = "最大動作クロック周波数 #{@cpus.turbospeed}GHz"
-    .cpu__image
-      = image_tag "#{@cpus.image}",class: "image"
-    .cpu__developer
-      = @cpus.developer.name
-    .cpu__socket
-      = @cpus.cpu_socket.name
-    .cpu__gpu
+    .cpu__head
+      -# 注意情報
+    .cpu__bottom
+      .cpu__bottom__left
+        .cpu__bottom__left__image
+          = image_tag "#{@cpus.image}", class: "image"
+      .cpu__bottom__right
+        .table
+          %table
+            %tr
+              %td.name 名称
+              %td.p_name
+                = @cpus.name
+              %td.developer メーカー
+              %td.p_developer
+                = @cpus.developer.name
+            %tr
+              %td.series シリーズ
+              %td.p_series
+                = @cpus.series.name
+              %td.tdp TDP
+              %td.p_tdp
+                = "#{@cpus.tdp}W"
+            %tr
+              %td.core コア数
+              %td.p_core
+                = "#{@cpus.core}コア"
+              %td.thread スレッド数
+              %td.p_thread
+                = "#{@cpus.thread}スレッド"
+            %tr
+              %td.clockspeed 定格クロック周波数
+              %td.p_clockspeed
+                = "#{@cpus.clockspeed}GHz"
+              %td.turbospeed 最大クロック周波数
+              %td.p_turbospeed
+                = "#{@cpus.turbospeed}GHz"
+            %tr
+              %td.gpu 内蔵グラフィック
+              %td.p_gpu{:colspan => "3"}
+                - if @cpus.gpu == ""
+                  = "非搭載"
+                - else
+                  = @cpus.gpu
+            %tr
+              %td.release_ja 国内発売日
+              %td.p_release_ja
+                = @cpus.release_ja
+              %td.release_g 世界発売日
+              %td.p_release_g
+                = @cpus.release_g
+            %tr
+              %td.r15 CINEBENCH R15
+              %td.p_r15
+                = @cpus.r15
+              %td.r20 CINEBENCH R20
+              %td.p_r20
+                = @cpus.r20              
+
+
+
 
 = render "shared/footer" # フッター呼び出し
+
+-# .cpu__name
+-#   = @cpus.name
+-# .cpu__price
+-#   = "￥#{@cpus.price.to_s(:delimited)}"
+-# .cpu__core
+-#   = "コア数 #{@cpus.core}"
+-# .cpu__thread
+-#   = "スレッド数 #{@cpus.thread}"
+-# .cpu__clockspeed
+-#   = "クロック周波数 #{@cpus.clockspeed}GHz"
+-# .cpu__turbospeed
+-#   = "最大動作クロック周波数 #{@cpus.turbospeed}GHz"
+-# .cpu__image
+-#   = image_tag "#{@cpus.image}",class: "image"
+-# .cpu__developer
+-#   = @cpus.developer.name
+-# .cpu__socket
+-#   = @cpus.cpu_socket.name
+-# .cpu__gpu
