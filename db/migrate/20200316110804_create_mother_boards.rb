@@ -3,6 +3,7 @@ class CreateMotherBoards < ActiveRecord::Migration[5.2]
     create_table :mother_boards do |t|
       t.string      :name,              null:false
       t.integer     :price
+      t.string      :image
       t.references  :chip_set,          foreign_key:true
       t.references  :form_factor,       foreign_key:true
       t.references  :cpu_socket,        foreign_key:true
