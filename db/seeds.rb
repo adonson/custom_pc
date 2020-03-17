@@ -166,8 +166,97 @@
 #   {id: 42, name: 'XFX'},
 #   {id: 43, name: 'ZOTAC'},
 #   {id: 44, name: '玄人志向'},
+#   {id: 45, name: 'ADATA'},
+#   {id: 46, name: 'AMD'},
+#   {id: 47, name: 'Apple'},
+#   {id: 48, name: 'CFD'},
+#   {id: 49, name: 'corsair'},
+#   {id: 50, name: 'crucial'},
+#   {id: 51, name: 'Elixir'},
+#   {id: 52, name: 'G.Skill'},
+#   {id: 53, name: 'GALAXY'},
+#   {id: 55, name: 'HP'},
+#   {id: 56, name: 'IBM'},
+#   {id: 57, name: 'IODATA'},
+#   {id: 58, name: 'KEIAN'},
+#   {id: 59, name: 'Lenovo'},
+#   {id: 60, name: 'Micron'},
+#   {id: 61, name: 'NEC'},
+#   {id: 62, name: 'OCZ'},
+#   {id: 63, name: 'Patriot'},
+#   {id: 64, name: 'PQI'},
+#   {id: 65, name: 'RAMMAX Technology'},
+#   {id: 66, name: 'Silicon Power'},
+#   {id: 67, name: 'SK hynix'},
+#   {id: 68, name: 'Team'},
+#   {id: 69, name: 'ELECOM'},
+#   {id: 70, name: 'Kingston'},
+#   {id: 71, name: 'Samsung'},
+#   {id: 72, name: 'Transcend'},
+#   {id: 73, name: 'BUFFALO'},
 #  ]
 # )
+
+# MemorySpecification.create!(
+#  [ 
+#   {id: 1, name: 'DDR4 SDRAM'},
+#   {id: 2, name: 'DDR3 SDRAM'},
+#   {id: 3, name: 'DDR2 SDRAM'},
+#   {id: 4, name: 'DDR SDRAM'},
+#   {id: 5, name: 'RDRAM'},
+#   {id: 6, name: 'SDRAM'},
+#  ]
+# )
+
+# MemoryInterface.create!(
+#  [ 
+#   {id: 1, name: 'DIMM'},
+#   {id: 2, name: 'S.O.DIMM'},
+#   {id: 3, name: 'RIMM'},
+#   {id: 4, name: 'MICRO DIMM'},
+#  ]
+# )
+
+# MemoryModule.create!(
+#  [ 
+#   {id: 1, name: 'DDR4-2133'},
+#   {id: 2, name: 'DDR4-2400'},
+#   {id: 3, name: 'DDR4-2666'},
+#   {id: 4, name: 'DDR4-2800'},
+#   {id: 5, name: 'DDR4-2933'},
+#   {id: 6, name: 'DDR4-3000'},
+#   {id: 7, name: 'DDR4-3200'},
+#   {id: 8, name: 'DDR4-3300'},
+#   {id: 9, name: 'DDR4-3333'},
+#   {id: 10, name: 'DDR4-3400'},
+#   {id: 11, name: 'DDR4-3466'},
+#   {id: 12, name: 'DDR4-3600'},
+#   {id: 13, name: 'DDR4-3733'},
+#   {id: 14, name: 'DDR4-3800'},
+#   {id: 15, name: 'DDR4-3866'},
+#   {id: 16, name: 'DDR4-4000'},
+#   {id: 17, name: 'DDR4-4133'},
+#   {id: 18, name: 'DDR4-4200'},
+#   {id: 19, name: 'DDR4-4266'},
+#   {id: 20, name: 'DDR4-4333'},
+#   {id: 21, name: 'DDR4-4400'},
+#   {id: 22, name: 'DDR4-4500'},
+#   {id: 23, name: 'DDR4-4600'},
+#   {id: 24, name: 'DDR3-3000'},
+#   {id: 25, name: 'DDR3-2933'},
+#   {id: 26, name: 'DDR3-2800'},
+#   {id: 27, name: 'DDR3-2666'},
+#   {id: 28, name: 'DDR3-2400'},
+#   {id: 29, name: 'DDR3-2133'},
+#   {id: 30, name: 'DDR3-2000'},
+#   {id: 31, name: 'DDR3-1866'},
+#   {id: 32, name: 'DDR3-1800'},
+#   {id: 33, name: 'DDR3-1600'},
+#   {id: 34, name: 'DDR3-1333'},
+#   {id: 35, name: 'DDR3-1066'},
+#  ]
+# )
+
 # ーーーーーーforeign_key(END)ーーーーーー
 
 # ーーーーーーmain_tableーーーーーーーーー
