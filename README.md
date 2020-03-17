@@ -117,7 +117,7 @@ Things you may want to cover:
 |name|string|unique: true,null: false|
 ### association
 - has_many :mother_boards
-- has_many :memory
+- has_many :memories
 
 ## cpu_sockets table
 |Column|Type|Options|
@@ -155,6 +155,26 @@ Things you may want to cover:
 ### association
 - has_many :mother_boards
 
+## memory_specifications table
+|Column|Type|Options|
+|------|----|-------|
+|name|string|unique: true,null: false|
+### association
+- has_many :memories
+
+## memory_interfaces table
+|Column|Type|Options|
+|------|----|-------|
+|name|string|unique: true,null: false|
+### association
+- has_many :memories
+
+## memory_modules table
+|Column|Type|Options|
+|------|----|-------|
+|name|string|unique: true,null: false|
+### association
+- has_many :memories
 
 
 ## 「developer」と「maker」について
