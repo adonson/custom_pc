@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_17_101157) do
+ActiveRecord::Schema.define(version: 2020_03_17_122004) do
 
   create_table "bus_interfaces", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -165,6 +165,7 @@ ActiveRecord::Schema.define(version: 2020_03_17_101157) do
     t.integer "usb_type_c"
     t.integer "pin8"
     t.integer "pin6"
+    t.integer "led_id"
   end
 
 end
