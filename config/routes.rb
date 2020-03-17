@@ -17,4 +17,5 @@ Rails.application.routes.draw do
   resources :cpu, only: [:index, :show]
   resources :mother_board, only: [:index, :show]
   resources :memory, only: [:index, :show]
+  resources :videocard, only: [:index, :show]
 end
