@@ -18,7 +18,7 @@ Things you may want to cover:
 # Database creation （DB設計）
 ## users table
 
-## cpu table
+## cpus table
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null:false|
@@ -37,11 +37,12 @@ Things you may want to cover:
 ### association
 - belongs_to :developer
 - belongs_to :socket
-## mother_board table
+## mother_boards table
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null:false|
 |price|integer||
+|image|string||
 |maker_id|references|foreign_key:true|
 |chip_set_id|references|foreign_key:true|
 |form_factor_id|references|foreign_key:true|
@@ -65,6 +66,8 @@ Things you may want to cover:
 |pci_express_1x|integer||
 |sata_slot|integer||
 |m2_slot|integer||
+|release_g|date||
+|release_ja|date||
 ### association
 - belongs_to :maker
 - belongs_to :chip_set
@@ -74,7 +77,25 @@ Things you may want to cover:
 - belongs_to :memory_type
 - belongs_to :led
 ## memories table
-
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null:false|
+|price|integer||
+|image|string||
+|value_per_card|integer||
+|card|integer||
+|ecc|integer||
+|maker_id|references|foreign_key:true|
+|memory_specification_id|references|foreign_key:true|
+|memory_interface_id|references|foreign_key:true|
+|memory_module_id|references|foreign_key:true|
+|release_g|date||
+|release_ja|date||
+### association
+- belongs_to :maker
+- belongs_to :memory_specification
+- belongs_to :memory_interface
+- belongs_to :memory_module
 ## videocards table
 
 ## cases table
@@ -84,6 +105,8 @@ Things you may want to cover:
 ## storages table
 
 ## developers table
+|Column|Type|Options|
+|------|----|-------|
 |name|string|unique: true,null: false|
 ### association
 - has_many :cpu
@@ -94,13 +117,14 @@ Things you may want to cover:
 |name|string|unique: true,null: false|
 ### association
 - has_many :mother_boards
+- has_many :memories
 
 ## cpu_sockets table
 |Column|Type|Options|
 |------|----|-------|
 |name|string|unique: true,null: false|
 ### association
-- has_many :cpu
+- has_many :cpus
 - has_many :mother_boards
 
 ## chip_sets table
@@ -130,6 +154,28 @@ Things you may want to cover:
 |name|string|unique: true,null: false|
 ### association
 - has_many :mother_boards
+
+## memory_specifications table
+|Column|Type|Options|
+|------|----|-------|
+|name|string|unique: true,null: false|
+### association
+- has_many :memories
+
+## memory_interfaces table
+|Column|Type|Options|
+|------|----|-------|
+|name|string|unique: true,null: false|
+### association
+- has_many :memories
+
+## memory_modules table
+|Column|Type|Options|
+|------|----|-------|
+|name|string|unique: true,null: false|
+### association
+- has_many :memories
+
 
 ## 「developer」と「maker」について
 前者はCPU、グラフィックボードなどにおけるソフト開発、後者はハード開発を想定
