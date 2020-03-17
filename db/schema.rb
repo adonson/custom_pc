@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_17_045646) do
+ActiveRecord::Schema.define(version: 2020_03_17_045837) do
 
   create_table "chip_sets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -64,6 +64,10 @@ ActiveRecord::Schema.define(version: 2020_03_17_045646) do
     t.integer "ecc"
     t.date "release_g"
     t.date "release_ja"
+    t.integer "maker_id"
+    t.integer "memory_specification_id"
+    t.integer "memory_interface_id"
+    t.integer "memory_module_id"
   end
 
   create_table "memory_interfaces", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
