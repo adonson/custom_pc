@@ -55,6 +55,7 @@
 #     {id: 1, name: 'Aura Sync'},
 #     {id: 2, name: 'Mystic Light'},
 #     {id: 3, name: 'RGB FUSION'},
+#     {id: 4, name: 'SPECTRA 2.0'},
 #   ]
 # )
 

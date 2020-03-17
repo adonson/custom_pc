@@ -97,7 +97,37 @@ Things you may want to cover:
 - belongs_to :memory_interface
 - belongs_to :memory_module
 ## videocards table
-
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null:false|
+|price|integer||
+|image|string||
+|release_g|date||
+|release_ja|date||
+|sli|integer||
+|crossfire|integer||
+|videocard_memory_value|integer||
+|auxiliary_power|integer||
+|mini_hdmi|integer||
+|mini_display_port|integer||
+|hdmi|integer||
+|display_port|integer||
+|d_sub|integer||
+|div|integer||
+|usb_type_c|integer||
+|pin8|integer||
+|pin6|integer||
+|maker_id|references|foreign_key:true|
+|developer_id|references|foreign_key:true|
+|videocard_chip_id|references|foreign_key:true|
+|bus_interface_id|references|foreign_key:true|
+|videocard_memory_id|references|foreign_key:true|
+### association
+- belongs_to :maker
+- belongs_to :developer
+- belongs_to :videocard_chip
+- belongs_to :bus_interface
+- belongs_to :videocard_memory
 ## cases table
 
 ## pu table
@@ -110,7 +140,7 @@ Things you may want to cover:
 |name|string|unique: true,null: false|
 ### association
 - has_many :cpu
-
+- has_many :videocards
 ## makers table
 |Column|Type|Options|
 |------|----|-------|
@@ -118,6 +148,7 @@ Things you may want to cover:
 ### association
 - has_many :mother_boards
 - has_many :memories
+- has_many :videocards
 
 ## cpu_sockets table
 |Column|Type|Options|
@@ -176,6 +207,26 @@ Things you may want to cover:
 ### association
 - has_many :memories
 
+## videocard_chips table
+|Column|Type|Options|
+|------|----|-------|
+|name|string|unique: true,null: false|
+### association
+- has_many :videocards
+
+## bus_interfaces table
+|Column|Type|Options|
+|------|----|-------|
+|name|string|unique: true,null: false|
+### association
+- has_many :videocards
+
+## videocard_memories table
+|Column|Type|Options|
+|------|----|-------|
+|name|string|unique: true,null: false|
+### association
+- has_many :videocards
 
 ## 「developer」と「maker」について
 前者はCPU、グラフィックボードなどにおけるソフト開発、後者はハード開発を想定
