@@ -5,7 +5,7 @@
       .cpu__block
         .cpu__block__image
           = link_to cpu_path(cpu.id) do
-            - image_tag "#{cpu.image}",class: "image"
+            - image_tag "cpu/#{cpu.image}",class: "image"
         .cpu__block__developer    
           = cpu.developer.name
         .cpu__block__name
