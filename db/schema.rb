@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_16_123547) do
+ActiveRecord::Schema.define(version: 2020_03_17_031058) do
 
   create_table "chip_sets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -86,6 +86,8 @@ ActiveRecord::Schema.define(version: 2020_03_16_123547) do
     t.integer "memory_type_id"
     t.integer "led_id"
     t.integer "maker_id"
+    t.date "release_g"
+    t.date "release_ja"
   end
 
   create_table "series", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
