@@ -258,6 +258,100 @@
 #  ]
 # )
 
+# BusInterface.create!(
+#  [ 
+#   {id: 1, name: 'PCI Express 4.0'},
+#   {id: 2, name: 'PCI Express 3.0'},
+#   {id: 3, name: 'PCI Express 2.1'},
+#   {id: 4, name: 'PCI Express 2.0'},
+#   {id: 5, name: 'PCI Express x16'},
+#   {id: 6, name: 'PCI Express x1'},
+#   {id: 7, name: 'PCI'},
+#   {id: 8, name: 'AGP 8X'},
+#   {id: 9, name: 'AGP 4X'},
+#   {id: 10, name: 'USB Type-C'},
+#   {id: 11, name: 'USB3.0'},
+#   {id: 12, name: 'USB2.0'},
+#  ]
+# )
+
+# VideocardChip.create!(
+#  [ 
+#   {id: 1, name: 'GeForce RTX 2080Ti'},
+#   {id: 2, name: 'GeForce RTX 2080 SUPER'},
+#   {id: 3, name: 'GeForce RTX 2080'},
+#   {id: 4, name: 'GeForce RTX 2070 SUPER'},
+#   {id: 5, name: 'GeForce RTX 2070'},
+#   {id: 6, name: 'GeForce RTX 2060 SUPER'},
+#   {id: 7, name: 'GeForce RTX 2060'},
+#   {id: 8, name: 'GeForce GTX 1660Ti'},
+#   {id: 9, name: 'GeForce GTX 1660 SUPER'},
+#   {id: 10, name: 'GeForce GTX 1660'},
+#   {id: 11, name: 'GeForce GTX 1650 SUPER'},
+#   {id: 12, name: 'GeForce GTX 1650'},
+#   {id: 13, name: 'GeForce GTX TITAN Z'},
+#   {id: 14, name: 'GeForce GTX TITAN Black'},
+#   {id: 15, name: 'GeForce GTX TITAN X'},
+#   {id: 16, name: 'GeForce GTX TITAN'},
+#   {id: 17, name: 'GeForce GTX 1080Ti'},
+#   {id: 18, name: 'GeForce GTX 1080'},
+#   {id: 19, name: 'GeForce GTX 1070Ti'},
+#   {id: 20, name: 'GeForce GTX 1070'},
+#   {id: 21, name: 'GeForce GTX 1060'},
+#   {id: 22, name: 'GeForce GTX 1050Ti'},
+#   {id: 23, name: 'GeForce GTX 1050'},
+#   {id: 24, name: 'GeForce GTX 980Ti'},
+#   {id: 25, name: 'GeForce GTX 980'},
+#   {id: 26, name: 'GeForce GTX 970'},
+#   {id: 27, name: 'GeForce GTX 960'},
+#   {id: 28, name: 'GeForce GTX 950'},
+#   {id: 29, name: 'GeForce GTX 780Ti'},
+#   {id: 30, name: 'GeForce GTX 780'},
+#   {id: 31, name: 'GeForce GTX 770'},
+#   {id: 32, name: 'GeForce GTX 760'},
+#   {id: 33, name: 'GeForce GTX 750Ti'},
+#   {id: 34, name: 'GeForce GTX 750'},
+#   {id: 35, name: 'Radeon RX 5700 XT'},
+#   {id: 36, name: 'Radeon RX 5700'},
+#   {id: 37, name: 'Radeon RX 5600 XT'},
+#   {id: 38, name: 'Radeon RX 5500 XT'},
+#   {id: 39, name: 'Radeon VII'},
+#   {id: 40, name: 'Radeon RX Vega 64'},
+#   {id: 41, name: 'Radeon RX Vega 56'},
+#   {id: 42, name: 'Radeon RX 590'},
+#   {id: 43, name: 'Radeon RX 580'},
+#   {id: 44, name: 'Radeon RX 570'},
+#   {id: 45, name: 'Radeon RX 560'},
+#   {id: 46, name: 'Radeon RX 480'},
+#   {id: 47, name: 'Radeon RX 470'},
+#   {id: 48, name: 'Radeon RX 460'},
+#   {id: 49, name: 'Radeon Pro Duo'},
+#   {id: 50, name: 'Radeon R9 Fury'},
+#   {id: 51, name: 'Radeon R9 Fury X'},
+#   {id: 52, name: 'Radeon R9 Nano'},
+#   {id: 53, name: 'Radeon R9 390X'},
+#   {id: 54, name: 'Radeon R9 390'},
+#   {id: 55, name: 'Radeon R9 380X'},
+#   {id: 56, name: 'Radeon R9 380'},
+#   {id: 57, name: 'Radeon R9 295X2'},
+#   {id: 58, name: 'Radeon R9 290X'},
+#   {id: 59, name: 'Radeon R9 290'},
+#   {id: 60, name: 'Radeon R9 285'},
+#   {id: 61, name: 'Radeon R9 280X'},
+#   {id: 62, name: 'Radeon R9 280'},
+#   {id: 63, name: 'Radeon R9 270X'},
+#   {id: 64, name: 'Radeon R9 270'},
+#  ]
+# )
+
+# VideocardMemory.create!(
+#  [ 
+#   {id: 1, name: 'GDDR6'},
+#   {id: 2, name: 'GDDR5X'},
+#   {id: 3, name: 'GDDR5'},
+#  ]
+# )
+
 # ーーーーーーforeign_key(END)ーーーーーー
 
 # ーーーーーーmain_tableーーーーーーーーー
