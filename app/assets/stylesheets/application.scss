@@ -3,9 +3,18 @@
 @import 'shared/header';
 @import 'shared/footer';
 
-// CPU
+// cpu
 @import'cpu/index';
 @import'cpu/show';
+// memory
+@import'memory/index';
+@import'memory/show';
+// mother_board
+@import'mother_board/index';
+@import'mother_board/show';
+// videocard
+@import'videocard/index';
+@import'videocard/show';
 
 // font-awesome用
 @import "font-awesome-sprockets";
