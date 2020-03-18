@@ -155,7 +155,6 @@ Things you may want to cover:
 |maker_id|references|foreign_key:true|
 ### association
 - has_many :makers
-- has_many :case_factors
 ## pu table
 
 ## storages table
