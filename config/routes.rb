@@ -18,4 +18,5 @@ Rails.application.routes.draw do
   resources :mother_board, only: [:index, :show]
   resources :memory, only: [:index, :show]
   resources :videocard, only: [:index, :show]
+  resources :case, only: [:index, :show]
 end
