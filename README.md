@@ -153,7 +153,9 @@ Things you may want to cover:
 |height|integer||
 |depth|integer||
 |maker_id|references|foreign_key:true|
-||||ケースファクターの中間テーブルを作成する必要あり
+### association
+- has_many :makers
+- has_many :case_factors
 ## pu table
 
 ## storages table
@@ -173,6 +175,7 @@ Things you may want to cover:
 - has_many :mother_boards
 - has_many :memories
 - has_many :videocards
+- has_many :cases
 
 ## cpu_sockets table
 |Column|Type|Options|
@@ -252,6 +255,24 @@ Things you may want to cover:
 |name|string|unique: true,null: false|
 ### association
 - has_many :videocards
+
+## factors table
+|Column|Type|Options|
+|------|----|-------|
+|name|string|unique: true,null: false|
+### association
+- has_many :case_factors
+
+## case_factor table
+|Column|Type|Options|
+|------|----|-------|
+|case_id|references|null:false,foreign_key:true|
+|factor_id|references|null:false,foreign_key:true|
+
+### association
+- belongs_to :case
+- belongs_to :factor
+
 
 ## 「developer」と「maker」について
 前者はCPU、グラフィックボードなどにおけるソフト開発、後者はハード開発を想定
