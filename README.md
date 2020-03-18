@@ -36,7 +36,7 @@ Things you may want to cover:
 |developer_id|references|foreign_key:true|
 ### association
 - belongs_to :developer
-- belongs_to :socket
+- belongs_to :cpu_socket
 ## mother_boards table
 |Column|Type|Options|
 |------|----|-------|
@@ -72,7 +72,7 @@ Things you may want to cover:
 - belongs_to :maker
 - belongs_to :chip_set
 - belongs_to :form_factor
-- belongs_to :cpu_cocket
+- belongs_to :cpu_socket
 - belongs_to :form_factor
 - belongs_to :memory_type
 - belongs_to :led
@@ -122,14 +122,39 @@ Things you may want to cover:
 |videocard_chip_id|references|foreign_key:true|
 |bus_interface_id|references|foreign_key:true|
 |videocard_memory_id|references|foreign_key:true|
+|led_id|references|foreign_key:true|
 ### association
 - belongs_to :maker
 - belongs_to :developer
 - belongs_to :videocard_chip
 - belongs_to :bus_interface
 - belongs_to :videocard_memory
+- belongs_to :led
 ## cases table
-
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null:false|
+|price|integer||
+|image|string||
+|release_g|date||
+|release_ja|date||
+|shadow_bay_2_5|integer||
+|shadow_bay_3_5|integer||
+|bay_3_5|integer||
+|bay_5_2_5|integer||
+|color|string||
+|usb_type_c|integer||
+|usb3_1|integer||
+|usb3_0|integer||
+|usb2_0|integer||
+|mic|integer||
+|headphone|integer||
+|width|integer||
+|height|integer||
+|depth|integer||
+|maker_id|references|foreign_key:true|
+### association
+- has_many :makers
 ## pu table
 
 ## storages table
@@ -149,6 +174,7 @@ Things you may want to cover:
 - has_many :mother_boards
 - has_many :memories
 - has_many :videocards
+- has_many :cases
 
 ## cpu_sockets table
 |Column|Type|Options|
@@ -185,6 +211,7 @@ Things you may want to cover:
 |name|string|unique: true,null: false|
 ### association
 - has_many :mother_boards
+- has_many :videocards
 
 ## memory_specifications table
 |Column|Type|Options|
@@ -227,6 +254,24 @@ Things you may want to cover:
 |name|string|unique: true,null: false|
 ### association
 - has_many :videocards
+
+## factors table
+|Column|Type|Options|
+|------|----|-------|
+|name|string|unique: true,null: false|
+### association
+- has_many :case_factors
+
+## case_factor table
+|Column|Type|Options|
+|------|----|-------|
+|case_id|references|null:false,foreign_key:true|
+|factor_id|references|null:false,foreign_key:true|
+
+### association
+- belongs_to :case
+- belongs_to :factor
+
 
 ## 「developer」と「maker」について
 前者はCPU、グラフィックボードなどにおけるソフト開発、後者はハード開発を想定

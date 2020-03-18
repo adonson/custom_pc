@@ -352,6 +352,18 @@
 #  ]
 # )
 
+# Factor.create!(
+#   [
+#     {id: 1, name: 'ATX'},
+#     {id: 2, name: 'Micro-ATX'},
+#     {id: 3, name: 'Extended-ATX'},
+#     {id: 4, name: 'Mini-DTX'},
+#     {id: 5, name: 'Mini-ITX'},
+#     {id: 6, name: 'Mini-STX'},
+#     {id: 7, name: 'nano-ITX'},
+#     {id: 8, name: 'XL-ATX'},
+#   ]
+# )
 # ーーーーーーforeign_key(END)ーーーーーー
 
 # ーーーーーーmain_tableーーーーーーーーー
