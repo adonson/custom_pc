@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_18_052906) do
+ActiveRecord::Schema.define(version: 2020_03_19_035012) do
 
   create_table "bus_interfaces", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -151,6 +151,26 @@ ActiveRecord::Schema.define(version: 2020_03_18_052906) do
     t.integer "maker_id"
     t.date "release_g"
     t.date "release_ja"
+  end
+
+  create_table "plus80s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+  end
+
+  create_table "power_unit_factors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+  end
+
+  create_table "power_units", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "price"
+    t.string "image"
+    t.date "release_g"
+    t.date "release_ja"
+    t.integer "power_value"
+    t.integer "power_unit_factors_id"
+    t.integer "plus80_id"
+    t.integer "maker_id"
   end
 
   create_table "series", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
