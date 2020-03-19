@@ -156,7 +156,7 @@ Things you may want to cover:
 ### association
 - has_many :makers
 
-## power_unit table
+## power_units table
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null:false|
@@ -169,11 +169,29 @@ Things you may want to cover:
 |plus80_id|references|foreign_key:true|
 |maker_id|references|foreign_key:true|
 ### association
-- has_many :makers
-- has_many :power_unit_factors
-- has_many :plus80
+- belongs_to :makers
+- belongs_to :power_unit_factors
+- belongs_to :plus80s
 
-## storages table
+## ssds table
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null:false|
+|price|integer||
+|image|string||
+|release_g|date||
+|release_ja|date||
+|ssd_value|integer||
+|nvme|integer||
+|ssd_size_id|references|foreign_key:true|
+|ssd_interface_id|references|foreign_key:true|
+|ssd_type_id|references|foreign_key:true|
+|maker_id|references|foreign_key:true|
+### association
+- belongs_to :ssd_interfaces
+- belongs_to :ssd_sizes
+- belongs_to :ssd_types
+- belongs_to :makers
 
 ## developers table
 |Column|Type|Options|
@@ -192,6 +210,7 @@ Things you may want to cover:
 - has_many :videocards
 - has_many :cases
 - has_many :power_units
+- has_many :ssd
 
 ## cpu_sockets table
 |Column|Type|Options|
@@ -300,9 +319,29 @@ Things you may want to cover:
 |name|string|unique: true,null: false|
 ### association
 - belongs_to :power_unit
+
+## ssd_interface
+|Column|Type|Options|
+|------|----|-------|
+|name|string|unique: true,null: false|
+### association
+- belongs_to :ssd
+## ssd_size
+|Column|Type|Options|
+|------|----|-------|
+|name|string|unique: true,null: false|
+### association
+- belongs_to :ssd
+## ssd_type
+|Column|Type|Options|
+|------|----|-------|
+|name|string|unique: true,null: false|
+### association
+- belongs_to :ssd
+
 ## 「developer」と「maker」について
 前者はCPU、グラフィックボードなどにおけるソフト開発、後者はハード開発を想定
-例えばインテル、AMD、NVIDIAが前者となり、ASUS、MSI、GIGABYTEは後者となる（インテルはストレージメーカーにも該当するため、両者それぞれに属する）
+例えばインテル、AMD、NVIDIAが前者となり、ASUS、MSI、GIGABYTEは後者となる（インテルはSSDメーカーにも該当するため、両者それぞれに属する）
 * Database initialization
 
 * How to run the test suite

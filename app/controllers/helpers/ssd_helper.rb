@@ -1,0 +1,2 @@
+module SsdHelper
+end
