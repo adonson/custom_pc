@@ -1,7 +1,6 @@
 class Cpu < ApplicationRecord
-  belongs_to :maker
-  belongs_to :ssd_interface
-  belongs_to :ssd_size
-  belongs_to :ssd_type
+  belongs_to :developer
+  belongs_to :cpu_socket
+  belongs_to :series
   validates  :name, presence:true
 end
