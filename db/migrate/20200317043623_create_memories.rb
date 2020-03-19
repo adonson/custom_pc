@@ -6,6 +6,7 @@ class CreateMemories < ActiveRecord::Migration[5.2]
       t.string      :image
       t.integer     :value_per_card
       t.integer     :card
+      t.integer     :memory_speed
       t.integer     :ecc
       t.date        :release_g
       t.date        :release_ja

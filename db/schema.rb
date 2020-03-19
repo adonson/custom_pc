@@ -103,7 +103,6 @@ ActiveRecord::Schema.define(version: 2020_03_19_054223) do
     t.integer "maker_id"
     t.integer "memory_specification_id"
     t.integer "memory_interface_id"
-    t.integer "memory_module_id"
   end
 
   create_table "memory_interfaces", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

@@ -3,6 +3,5 @@ class AddColumnMemories < ActiveRecord::Migration[5.2]
     add_column :memories, :maker_id, :integer
     add_column :memories, :memory_specification_id, :integer
     add_column :memories, :memory_interface_id, :integer
-    add_column :memories, :memory_module_id, :integer
   end
 end
