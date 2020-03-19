@@ -375,6 +375,17 @@ PowerUnitFactor.create!(
     {id: 6, name: 'TFX'},
   ]
 )
+
+Plus80.create!(
+  [
+    {id: 1, name: 'Titanium'},
+    {id: 2, name: 'Platinum'},
+    {id: 3, name: 'Gold'},
+    {id: 4, name: 'Silver'},
+    {id: 5, name: 'Bronze'},
+    {id: 6, name: 'Standard'},
+  ]
+)
 # ーーーーーーforeign_key(END)ーーーーーー
 
 # ーーーーーーmain_tableーーーーーーーーー
