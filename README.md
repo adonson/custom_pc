@@ -84,6 +84,7 @@ Things you may want to cover:
 |image|string||
 |value_per_card|integer||
 |card|integer||
+|memory_speed|integer||
 |ecc|integer||
 |maker_id|references|foreign_key:true|
 |memory_specification_id|references|foreign_key:true|
