@@ -341,7 +341,7 @@ Things you may want to cover:
 
 ## 「developer」と「maker」について
 前者はCPU、グラフィックボードなどにおけるソフト開発、後者はハード開発を想定
-例えばインテル、AMD、NVIDIAが前者となり、ASUS、MSI、GIGABYTEは後者となる（インテルはストレージメーカーにも該当するため、両者それぞれに属する）
+例えばインテル、AMD、NVIDIAが前者となり、ASUS、MSI、GIGABYTEは後者となる（インテルはSSDメーカーにも該当するため、両者それぞれに属する）
 * Database initialization
 
 * How to run the test suite
