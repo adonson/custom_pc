@@ -155,7 +155,23 @@ Things you may want to cover:
 |maker_id|references|foreign_key:true|
 ### association
 - has_many :makers
-## pu table
+
+## power_unit table
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null:false|
+|price|integer||
+|image|string||
+|release_g|date||
+|release_ja|date||
+|power_value|integer||
+|power_unit_factor_id|references|foreign_key:true|
+|plus80_id|references|foreign_key:true|
+|maker_id|references|foreign_key:true|
+### association
+- has_many :makers
+- has_many :power_unit_factors
+- has_many :plus80
 
 ## storages table
 
@@ -175,6 +191,7 @@ Things you may want to cover:
 - has_many :memories
 - has_many :videocards
 - has_many :cases
+- has_many :power_units
 
 ## cpu_sockets table
 |Column|Type|Options|
@@ -267,12 +284,22 @@ Things you may want to cover:
 |------|----|-------|
 |case_id|references|null:false,foreign_key:true|
 |factor_id|references|null:false,foreign_key:true|
-
 ### association
 - belongs_to :case
 - belongs_to :factor
 
-
+## power_unit_factor table
+|Column|Type|Options|
+|------|----|-------|
+|name|string|unique: true,null: false|
+### association
+- belongs_to :power_unit
+## plus80 
+|Column|Type|Options|
+|------|----|-------|
+|name|string|unique: true,null: false|
+### association
+- belongs_to :power_unit
 ## 「developer」と「maker」について
 前者はCPU、グラフィックボードなどにおけるソフト開発、後者はハード開発を想定
 例えばインテル、AMD、NVIDIAが前者となり、ASUS、MSI、GIGABYTEは後者となる（インテルはストレージメーカーにも該当するため、両者それぞれに属する）
