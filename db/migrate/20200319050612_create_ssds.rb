@@ -7,7 +7,7 @@ class CreateSsds < ActiveRecord::Migration[5.2]
       t.date        :release_g
       t.date        :release_ja
       t.integer     :ssd_value
-      t.integer     :nvme_value
+      t.integer     :nvme
     end
   end
 end
