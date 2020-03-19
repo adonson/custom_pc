@@ -365,25 +365,68 @@
 #   ]
 # )
 
-PowerUnitFactor.create!(
+# PowerUnitFactor.create!(
+#   [
+#     {id: 1, name: 'ATX'},
+#     {id: 2, name: 'BTX'},
+#     {id: 3, name: 'EPS'},
+#     {id: 4, name: 'FlexATX'},
+#     {id: 5, name: 'SFX'},
+#     {id: 6, name: 'TFX'},
+#   ]
+# )
+
+# Plus80.create!(
+#   [
+#     {id: 1, name: 'Titanium'},
+#     {id: 2, name: 'Platinum'},
+#     {id: 3, name: 'Gold'},
+#     {id: 4, name: 'Silver'},
+#     {id: 5, name: 'Bronze'},
+#     {id: 6, name: 'Standard'},
+#   ]
+# )
+
+SsdInterface.create!(
   [
-    {id: 1, name: 'ATX'},
-    {id: 2, name: 'BTX'},
-    {id: 3, name: 'EPS'},
-    {id: 4, name: 'FlexATX'},
-    {id: 5, name: 'SFX'},
-    {id: 6, name: 'TFX'},
+    {id: 1, name: 'Serial ATA'},
+    {id: 6, name: 'Serial ATA/USB'},
+    {id: 2, name: 'IDE'},
+    {id: 3, name: 'ZIF'},
+    {id: 4, name: 'USB'},
+    {id: 5, name: 'PCI-Express Mini Card'},
+    {id: 6, name: 'PCI-Express'},
+    {id: 7, name: 'ExpressCard'},
+    {id: 9, name: 'ExpressCard/USB'},
+    {id: 10, name: 'LIF'},
+    {id: 11, name: 'Thunderbolt/USB'},
+    {id: 12, name: 'SAS 6Gb/s'},
+    {id: 13, name: 'SAS 12Gb/s'},
+
   ]
 )
 
-Plus80.create!(
+SsdSize.create!(
   [
-    {id: 1, name: 'Titanium'},
-    {id: 2, name: 'Platinum'},
-    {id: 3, name: 'Gold'},
-    {id: 4, name: 'Silver'},
-    {id: 5, name: 'Bronze'},
-    {id: 6, name: 'Standard'},
+    {id: 1, name: '1.8インチ'},
+    {id: 2, name: '2.5インチ'},
+    {id: 3, name: '3.5インチ'},
+    {id: 4, name: 'mSATA'},
+    {id: 5, name: 'M.2(Type 2242)'},
+    {id: 6, name: 'M.2(Type 2260)'},
+    {id: 7, name: 'M.2(Type 2280)'},
+    {id: 8, name: 'M.2(Type 22110)'},
+  ]
+)
+
+SsdType.create!(
+  [
+    {id: 1, name: 'MLC'},
+    {id: 2, name: 'SLC'},
+    {id: 3, name: 'TLC'},
+    {id: 4, name: '3D MLC'},
+    {id: 5, name: '3D TLC'},
+    {id: 6, name: '3D QLC'},
   ]
 )
 # ーーーーーーforeign_key(END)ーーーーーー
