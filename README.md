@@ -88,14 +88,12 @@ Things you may want to cover:
 |maker_id|references|foreign_key:true|
 |memory_specification_id|references|foreign_key:true|
 |memory_interface_id|references|foreign_key:true|
-|memory_module_id|references|foreign_key:true|
 |release_g|date||
 |release_ja|date||
 ### association
 - belongs_to :maker
 - belongs_to :memory_specification
 - belongs_to :memory_interface
-- belongs_to :memory_module
 ## videocards table
 |Column|Type|Options|
 |------|----|-------|
@@ -263,12 +261,7 @@ Things you may want to cover:
 ### association
 - has_many :memories
 
-## memory_modules table
-|Column|Type|Options|
-|------|----|-------|
-|name|string|unique: true,null: false|
-### association
-- has_many :memories
+
 
 ## videocard_chips table
 |Column|Type|Options|
