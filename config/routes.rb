@@ -20,4 +20,5 @@ Rails.application.routes.draw do
   resources :videocard, only: [:index, :show]
   resources :case, only: [:index, :show]
   resources :power_unit, only: [:index, :show]
+  resources :ssd, only: [:index, :show]
 end
