@@ -364,6 +364,17 @@
 #     {id: 8, name: 'XL-ATX'},
 #   ]
 # )
+
+PowerUnitFactor.create!(
+  [
+    {id: 1, name: 'ATX'},
+    {id: 2, name: 'BTX'},
+    {id: 3, name: 'EPS'},
+    {id: 4, name: 'FlexATX'},
+    {id: 5, name: 'SFX'},
+    {id: 6, name: 'TFX'},
+  ]
+)
 # ーーーーーーforeign_key(END)ーーーーーー
 
 # ーーーーーーmain_tableーーーーーーーーー
