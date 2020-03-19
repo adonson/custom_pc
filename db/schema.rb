@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_19_035012) do
+ActiveRecord::Schema.define(version: 2020_03_19_054223) do
 
   create_table "bus_interfaces", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -175,6 +175,32 @@ ActiveRecord::Schema.define(version: 2020_03_19_035012) do
 
   create_table "series", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
+  end
+
+  create_table "ssd_interfaces", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+  end
+
+  create_table "ssd_sizes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+  end
+
+  create_table "ssd_types", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+  end
+
+  create_table "ssds", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "price"
+    t.string "image"
+    t.date "release_g"
+    t.date "release_ja"
+    t.integer "ssd_value"
+    t.integer "nvme"
+    t.integer "ssd_interface_id"
+    t.integer "ssd_size_id"
+    t.integer "ssd_type_id"
+    t.integer "maker_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
