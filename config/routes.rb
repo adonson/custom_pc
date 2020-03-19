@@ -19,4 +19,5 @@ Rails.application.routes.draw do
   resources :memory, only: [:index, :show]
   resources :videocard, only: [:index, :show]
   resources :case, only: [:index, :show]
+  resources :power_unit, only: [:index, :show]
 end
