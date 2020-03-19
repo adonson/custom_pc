@@ -1,10 +1,10 @@
 class PowerUnitController < ApplicationController
   before_action :authenticate_user!, except: [:index,:show]
   def index
-    @cpus = Cpu.all
+    @power_units = PowerUnit.all
   end
 
   def show
-    @cpus = Cpu.find(params[:id])
+    @power_units = PowerUnit.find(params[:id])
   end
 end
