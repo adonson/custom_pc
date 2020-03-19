@@ -165,12 +165,12 @@ Things you may want to cover:
 |release_g|date||
 |release_ja|date||
 |power_value|integer||
-|powerunit_factor_id|references|foreign_key:true|
+|power_unit_factor_id|references|foreign_key:true|
 |plus80_id|references|foreign_key:true|
 |maker_id|references|foreign_key:true|
 ### association
 - has_many :makers
-- has_many :powerunit_factors
+- has_many :power_unit_factors
 - has_many :plus80
 
 ## storages table
@@ -288,7 +288,7 @@ Things you may want to cover:
 - belongs_to :case
 - belongs_to :factor
 
-## powerunit_factor table
+## power_unit_factor table
 |Column|Type|Options|
 |------|----|-------|
 |name|string|unique: true,null: false|
