@@ -197,6 +197,9 @@ Things you may want to cover:
 |name|string|null:false|
 |price|integer||
 |image|string||
+|fan_pic|string||
+|fan_rpm|string||
+|fan_size|string||
 |cpu_cooler_type|references|foreign_key:true|
 |maker_id|references|foreign_key:true|
 ### association
