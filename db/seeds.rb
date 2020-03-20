@@ -56,6 +56,7 @@ Led.create!(
     {id: 2, name: 'Mystic Light'},
     {id: 3, name: 'RGB FUSION'},
     {id: 4, name: 'SPECTRA 2.0'},
+    {id: 5, name: 'Polychrome SYNC'},
   ]
 )
 
@@ -429,4 +430,11 @@ Cpu.create!(
  ]
 )
 
+MotherBoard.create!(
+  [
+    {id: 1, name: 'B450 Steel Legend', price: 12000, image: 'B450 Steel Legend', memory_slot: 4, max_memory_value: 64, sli: NULL, crossfire: 1, display_port: 1, mini_display_port: 0, hdmi: 1, usb_type_c: 1, usb3_1: 4, usb3_2: 1, usb2_0: 2, pci_express_16x: 2, pci_express_8x: 0, pci_express_4x: 0, pci_express_1x: 4, sata_slot: 6, m2_slot: 2, chip_set_id: 20, form_factor_id: 1, cpu_socket_id: 8, memory_type_id: 1, led_id: 5, maker_id: 4, release_g: 20190222, release_ja: 20190222},
+
+    {id: 2, name: 'B450 GAMING PLUS MAX', price: 11000, image: 'B450 GAMING PLUS MAX', memory_slot: 4, max_memory_value: 64, sli: NULL, crossfire: 1, display_port: 0, mini_display_port: 0, hdmi: 1, usb_type_c: 1, usb3_1: 4, usb3_2: 1, usb2_0: 2, pci_express_16x: 2, pci_express_8x: 0, pci_express_4x: 0, pci_express_1x: 4, sata_slot: 6, m2_slot: 1, chip_set_id: 20, form_factor_id: 1, cpu_socket_id: 8, memory_type_id: 1, led_id: 2, maker_id: 31, release_g: 20190809, release_ja: 20190809},
+  ]
+)
 # ーーーーーーmain_table(END)ーーーーーー

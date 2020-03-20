@@ -12,8 +12,9 @@ class CreateMotherBoards < ActiveRecord::Migration[5.2]
       t.integer     :mini_display_port
       t.integer     :hdmi
       t.integer     :usb_type_c
-      t.integer     :usb3_1
-      t.integer     :usb3_0
+      t.integer     :usb3_2_gen2x2
+      t.integer     :usb3_2_gen2
+      t.integer     :usb3_2_gen1
       t.integer     :usb2_0
       t.integer     :pci_express_16x
       t.integer     :pci_express_8x

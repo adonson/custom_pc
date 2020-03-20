@@ -60,8 +60,9 @@ Things you may want to cover:
 |mini_display_port|integer||
 |hdmi|integer||
 |usb_type_c|integer||
-|usb3_1|integer||
-|usb3_0|integer||
+|usb3_2_gen2x2|integer||
+|usb3_2_gen2|integer||
+|usb3_2_gen1|integer||
 |usb2_0|integer||
 |led_id|references|foreign_key:true|
 |pci_express_16x|integer||
@@ -80,6 +81,8 @@ Things you may want to cover:
 - belongs_to :form_factor
 - belongs_to :memory_type
 - belongs_to :led
+##### USB規格について
+- 「USB3.1Gen1」は「USB3.2Gen1」また「USB3.1Gen2」は「USB3.2Gen2」と同じである。
 ## memories table
 |Column|Type|Options|
 |------|----|-------|
