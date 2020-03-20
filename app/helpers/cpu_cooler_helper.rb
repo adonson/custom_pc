@@ -1,0 +1,2 @@
+module CpuCoolerHelper
+end
