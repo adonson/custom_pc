@@ -1,4 +1,4 @@
-# ーーーーーーforeign_keyーーーーーー
+# # ーーーーーーforeign_keyーーーーーー
 Developer.create!(
  [ 
   {id: 1, name: 'INTEL'},
@@ -432,13 +432,15 @@ Cpu.create!(
 
 MotherBoard.create!(
   [
-    {id: 1, name: 'B450 Steel Legend', price: 12000, image: 'B450 Steel Legend', memory_slot: 4, max_memory_value: 64, sli: NULL, crossfire: 1, display_port: 1, mini_display_port: NULL, hdmi: 1, usb_type_c: 1, usb3_2_gen2x2: NULL, usb3_2_gen2: 1, usb_3_2_gen1: 4, usb2_0: 2, pci_express_16x: 2, pci_express_8x: NULL, pci_express_4x: NULL, pci_express_1x: 4, sata_slot: 6, m2_slot: 2, chip_set_id: 20, form_factor_id: 1, cpu_socket_id: 8, memory_type_id: 1, led_id: 5, maker_id: 4, release_g: 20190222, release_ja: 20190222},
+    {id: 1, name: 'B450 Steel Legend', price: 12000, image: 'B450 Steel Legend', memory_slot: 4, max_memory_value: 64, crossfire: 1, display_port: 1, hdmi: 1, usb_type_c: 1, usb3_2_gen2: 1, usb3_2_gen1: 4, usb2_0: 2, pci_express_16x: 2, pci_express_1x: 4, sata_slot: 6, m2_slot: 2, chip_set_id: 20, form_factor_id: 1, cpu_socket_id: 8, memory_type_id: 1, led_id: 5, maker_id: 4, release_g: 20190222, release_ja: 20190222},
 
-    {id: 2, name: 'B450 GAMING PLUS MAX', price: 11000, image: 'B450 GAMING PLUS MAX', memory_slot: 4, max_memory_value: 64, sli: NULL, crossfire: 1, display_port: NULL, mini_display_port: NULL, hdmi: 1, usb_type_c: 1, usb_3_2gen2x2: NULL, usb_3_2gen2: 2, usb_3_2gen1: 2, usb2_0: 2, pci_express_16x: 2, pci_express_8x: NULL, pci_express_4x: NULL, pci_express_1x: 4, sata_slot: 6, m2_slot: 1, chip_set_id: 20, form_factor_id: 1, cpu_socket_id: 8, memory_type_id: 1, led_id: 2, maker_id: 31, release_g: 20190809, release_ja: 20190809},
+    {id: 2, name: 'B450 GAMING PLUS MAX', price: 11000, image: 'B450 GAMING PLUS MAX', memory_slot: 4, max_memory_value: 64, crossfire: 1, hdmi: 1, usb_type_c: 1, usb3_2_gen2: 2, usb3_2_gen1: 2, usb2_0: 2, pci_express_16x: 2, pci_express_1x: 4, sata_slot: 6, m2_slot: 1, chip_set_id: 20, form_factor_id: 1, cpu_socket_id: 8, memory_type_id: 1, led_id: 2, maker_id: 31, release_g: 20190809, release_ja: 20190809},
 
-    {id: 3, name: 'MPG X570 GAMING PLUS', price: 17500, image: 'MPG X570 GAMING PLUS', memory_slot: 4, max_memory_value: 128, sli: NULL, crossfire: 1, display_port: NULL, mini_display_port: NULL, hdmi: 1, usb_type_c: 1, usb_3_2gen2x2: NULL, usb_3_2gen2: 1, usb_3_2gen1: 4, usb2_0: 2, pci_express_16x: 2, pci_express_8x: NULL, pci_express_4x: NULL, pci_express_1x: 3, sata_slot: 6, m2_slot: 2, chip_set_id: 16, form_factor_id: 1, cpu_socket_id: 8, memory_type_id: 1, led_id: 2, maker_id: 31, release_g: 20190707, release_ja: 20190707},
+    {id: 3, name: 'MPG X570 GAMING PLUS', price: 17500, image: 'MPG X570 GAMING PLUS', memory_slot: 4, max_memory_value: 128, crossfire: 1, hdmi: 1, usb_type_c: 1, usb3_2_gen2: 1, usb3_2_gen1: 4, usb2_0: 2, pci_express_16x: 2, pci_express_1x: 3, sata_slot: 6, m2_slot: 2, chip_set_id: 16, form_factor_id: 1, cpu_socket_id: 8, memory_type_id: 1, led_id: 2, maker_id: 31, release_g: 20190707, release_ja: 20190707},
 
-    {id: 4, name: 'ROG STRIX X570-F GAMING', price: 27500, image: 'ROG STRIX X570-F GAMING', memory_slot: 4, max_memory_value: 128, sli: 1, crossfire: 1, display_port: 1, mini_display_port: NULL, hdmi: 1, usb_type_c: 1, usb_3_2gen2x2: NULL, usb_3_2gen2: 3, usb_3_2gen1: 4, usb2_0: NULL, pci_express_16x: 3, pci_express_8x: NULL, pci_express_4x: 0, pci_express_1x: 2, sata_slot: 8, m2_slot: 2, chip_set_id: 16, form_factor_id: 1, cpu_socket_id: 8, memory_type_id: 1, led_id: 1, maker_id: 5, release_g: 20190707, release_ja: 20190707},
+    {id: 4, name: 'ROG STRIX X570-F GAMING', price: 27500, image: 'ROG STRIX X570-F GAMING', memory_slot: 4, max_memory_value: 128, sli: 1, crossfire: 1, display_port: 1, hdmi: 1, usb_type_c: 1, usb3_2_gen2: 3, usb3_2_gen1: 4, pci_express_16x: 3, pci_express_1x: 2, sata_slot: 8, m2_slot: 2, chip_set_id: 16, form_factor_id: 1, cpu_socket_id: 8, memory_type_id: 1, led_id: 1, maker_id: 5, release_g: 20190707, release_ja: 20190707},
+
+    # {id: 4, name: 'ROG STRIX X570-F GAMING', price: 27500, image: 'ROG STRIX X570-F GAMING', memory_slot: 4, max_memory_value: 128, sli: 1, crossfire: 1, display_port: 1, mini_display_port: NULL, hdmi: 1, usb_type_c: 1, thunderbolt3: NULL, usb3_2_gen_2x2: NULL, usb3_2gen_2: 3, usb3_2_gen1: 4, usb2_0: NULL, pci_express_16x: 3, pci_express_8x: NULL, pci_express_4x: 0, pci_express_1x: 2, sata_slot: 8, m2_slot: 2, chip_set_id: 16, form_factor_id: 1, cpu_socket_id: 8, memory_type_id: 1, led_id: 1, maker_id: 5, release_g: 20190707, release_ja: 20190707},
   ]
 )
 # ーーーーーーmain_table(END)ーーーーーー

@@ -60,6 +60,7 @@ Things you may want to cover:
 |mini_display_port|integer||
 |hdmi|integer||
 |usb_type_c|integer||
+|thunderbolt3|integer||
 |usb3_2_gen2x2|integer||
 |usb3_2_gen2|integer||
 |usb3_2_gen1|integer||
