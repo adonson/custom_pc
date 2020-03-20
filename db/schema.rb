@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_19_054223) do
+ActiveRecord::Schema.define(version: 2020_03_20_044403) do
 
   create_table "bus_interfaces", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -46,6 +46,28 @@ ActiveRecord::Schema.define(version: 2020_03_19_054223) do
 
   create_table "chip_sets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
+  end
+
+  create_table "cpu_cooler_cpu_sockets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "cpu_cooler_id", null: false
+    t.integer "cpu_socket_id", null: false
+  end
+
+  create_table "cpu_cooler_types", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+  end
+
+  create_table "cpu_coolers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "price"
+    t.string "image"
+    t.date "release_g"
+    t.date "release_ja"
+    t.integer "fan_pic"
+    t.integer "fan_rpm"
+    t.integer "fan_size"
+    t.integer "cpu_cooler_type_id"
+    t.integer "maker_id"
   end
 
   create_table "cpu_sockets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -106,10 +128,6 @@ ActiveRecord::Schema.define(version: 2020_03_19_054223) do
   end
 
   create_table "memory_interfaces", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name", null: false
-  end
-
-  create_table "memory_modules", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
   end
 

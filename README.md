@@ -154,7 +154,8 @@ Things you may want to cover:
 |maker_id|references|foreign_key:true|
 ### association
 - has_many :makers
-
+- has_many :case_factor
+- has_many :factor, through: :case_factor
 ## power_units table
 |Column|Type|Options|
 |------|----|-------|
@@ -171,7 +172,6 @@ Things you may want to cover:
 - belongs_to :makers
 - belongs_to :power_unit_factors
 - belongs_to :plus80s
-
 ## ssds table
 |Column|Type|Options|
 |------|----|-------|
@@ -191,7 +191,24 @@ Things you may want to cover:
 - belongs_to :ssd_sizes
 - belongs_to :ssd_types
 - belongs_to :makers
-
+## cpu_coolers table
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null:false|
+|price|integer||
+|image|string||
+|release_g|date||
+|release_ja|date||
+|fan_pic|integer||
+|fan_rpm|integer||
+|fan_size|integer||
+|cpu_cooler_type_id|references|foreign_key:true|
+|maker_id|references|foreign_key:true|
+### association
+- belongs_to :cpu_cooler_type
+- belongs_to :maker
+- has_many   :cpu_cooler_cpu_sockets
+- has_many   :cpu_sockets, through: :cpu_cooler_cpu_sockets
 ## developers table
 |Column|Type|Options|
 |------|----|-------|
@@ -209,8 +226,8 @@ Things you may want to cover:
 - has_many :videocards
 - has_many :cases
 - has_many :power_units
-- has_many :ssd
-
+- has_many :ssds
+- has_many :cpu_coolers
 ## cpu_sockets table
 |Column|Type|Options|
 |------|----|-------|
@@ -218,28 +235,26 @@ Things you may want to cover:
 ### association
 - has_many :cpus
 - has_many :mother_boards
-
+- has_many :cpu_cooler_cpu_sockets
+- has_many :cpu_coolers, through: :cpu_cooler_cpu_socket
 ## chip_sets table
 |Column|Type|Options|
 |------|----|-------|
 |name|string|unique: true,null: false|
 ### association
 - has_many :mother_boards
-
 ## form_factors table
 |Column|Type|Options|
 |------|----|-------|
 |name|string|unique: true,null: false|
 ### association
 - has_many :mother_boards
-
 ## memory_types table
 |Column|Type|Options|
 |------|----|-------|
 |name|string|unique: true,null: false|
 ### association
 - has_many :mother_boards
-
 ## leds table
 |Column|Type|Options|
 |------|----|-------|
@@ -247,51 +262,49 @@ Things you may want to cover:
 ### association
 - has_many :mother_boards
 - has_many :videocards
-
 ## memory_specifications table
 |Column|Type|Options|
 |------|----|-------|
 |name|string|unique: true,null: false|
 ### association
 - has_many :memories
-
 ## memory_interfaces table
 |Column|Type|Options|
 |------|----|-------|
 |name|string|unique: true,null: false|
 ### association
 - has_many :memories
-
-
-
+## cpu_cooler_types table
+|Column|Type|Options|
+|------|----|-------|
+|name|string|unique: true,null: false|
+### association
+- has_many :cpu_coolers
 ## videocard_chips table
 |Column|Type|Options|
 |------|----|-------|
 |name|string|unique: true,null: false|
 ### association
 - has_many :videocards
-
 ## bus_interfaces table
 |Column|Type|Options|
 |------|----|-------|
 |name|string|unique: true,null: false|
 ### association
 - has_many :videocards
-
 ## videocard_memories table
 |Column|Type|Options|
 |------|----|-------|
 |name|string|unique: true,null: false|
 ### association
 - has_many :videocards
-
 ## factors table
 |Column|Type|Options|
 |------|----|-------|
 |name|string|unique: true,null: false|
 ### association
 - has_many :case_factors
-
+- has_many :cases, through: :case_factor
 ## case_factor table
 |Column|Type|Options|
 |------|----|-------|
@@ -300,7 +313,6 @@ Things you may want to cover:
 ### association
 - belongs_to :case
 - belongs_to :factor
-
 ## power_unit_factor table
 |Column|Type|Options|
 |------|----|-------|
@@ -313,7 +325,6 @@ Things you may want to cover:
 |name|string|unique: true,null: false|
 ### association
 - belongs_to :power_unit
-
 ## ssd_interface
 |Column|Type|Options|
 |------|----|-------|
@@ -332,7 +343,14 @@ Things you may want to cover:
 |name|string|unique: true,null: false|
 ### association
 - belongs_to :ssd
-
+## cpu_cooler_cpu_socket
+|Column|Type|Options|
+|------|----|-------|
+|cpu_cooler_id|references|null:false,foreign_key:true|
+|cpu_socket_id|references|null:false,foreign_key:true|
+### association
+- belongs_to :cpu_cooler
+- belongs_to :cpu_socket
 ## 「developer」と「maker」について
 前者はCPU、グラフィックボードなどにおけるソフト開発、後者はハード開発を想定
 例えばインテル、AMD、NVIDIAが前者となり、ASUS、MSI、GIGABYTEは後者となる（インテルはSSDメーカーにも該当するため、両者それぞれに属する）
