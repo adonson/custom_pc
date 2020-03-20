@@ -389,6 +389,16 @@ SsdType.create!(
     {id: 6, name: '3D QLC'},
   ]
 )
+
+CpuCoolerType.create!(
+  [
+    {id: 1, name: 'トップフロー空冷'},
+    {id: 2, name: 'サイドフロー空冷'},
+    {id: 3, name: '簡易水冷'},
+    {id: 4, name: '本格水冷'},
+    {id: 5, name: 'ファンレス'},
+  ]
+)
 # ーーーーーーforeign_key(END)ーーーーーー
 
 # ーーーーーーmain_tableーーーーーーーーー
