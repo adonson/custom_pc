@@ -32,6 +32,10 @@ Things you may want to cover:
 |image|string||
 |release_g|date||
 |release_ja|date||
+|r15_s|integer||
+|r15_m|integer||
+|r20_s|integer||
+|r20_m|integer||
 |cpu_socket_id|references|foreign_key:true|
 |developer_id|references|foreign_key:true|
 ### association
