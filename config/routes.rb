@@ -21,4 +21,5 @@ Rails.application.routes.draw do
   resources :case, only: [:index, :show]
   resources :power_unit, only: [:index, :show]
   resources :ssd, only: [:index, :show]
+  resources :cpu_cooler, only: [:index, :show]
 end
