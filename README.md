@@ -197,10 +197,12 @@ Things you may want to cover:
 |name|string|null:false|
 |price|integer||
 |image|string||
-|fan_pic|string||
-|fan_rpm|string||
-|fan_size|string||
-|cpu_cooler_type|references|foreign_key:true|
+|release_g|date||
+|release_ja|date||
+|fan_pic|integer||
+|fan_rpm|integer||
+|fan_size|integer||
+|cpu_cooler_type_id|references|foreign_key:true|
 |maker_id|references|foreign_key:true|
 ### association
 - belongs_to :cpu_cooler_type
