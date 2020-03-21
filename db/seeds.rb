@@ -457,4 +457,14 @@ Memory.create!(
     # {id: 1, name: '', price: , image: , value_per_card: , card: , memory_speed: , ecc: , release_g: , release_ja: , maker_id: , memory_specification_id: , memory_interface_id: ,},
   ]
 )
+
+Videocard.create!(
+  [
+    {id: 1, name: 'ROG-STRIX-RTX2080TI-O11G-GAMING', price: 162000, image: 'ROG-STRIX-RTX2080TI-O11G-GAMING', release_g: 20181105, release_ja: 20181105, sil: 1,  videocard_memory_value: 11, auxiliary_power: 250, hdmi: 2, display_port: 2, usb_type_c: 1, pin8: 2, maker_id: 5, developer_id: 3, videocard_chip_id: 1, businterface_id: 2, videocard_memory_id: 1, led_id: 1},
+
+    {id: 1, name: '', price: , image: , release_g: , release_ja: , sil: , crossfire: , videocard_memory_value: , auxiliary_power: , mini_hdmi: , hdmi: , display_port: , mini_display_port: , d_sub: , div: , usb_type_c: , pin8: , pin6: , led_id: },
+
+    {id: 1, name: '', price: , image: , release_g: , release_ja: , sil: , crossfire: , videocard_memory_value: , auxiliary_power: , mini_hdmi: , hdmi: , display_port: , mini_display_port: , d_sub: , div: , usb_type_c: , pin8: , pin6: , led_id: },
+  ]
+)
 # ーーーーーーmain_table(END)ーーーーーー

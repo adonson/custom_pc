@@ -265,6 +265,11 @@ ActiveRecord::Schema.define(version: 2020_03_20_044403) do
     t.integer "usb_type_c"
     t.integer "pin8"
     t.integer "pin6"
+    t.integer "maker_id"
+    t.integer "developer_id"
+    t.integer "videocard_chip_id"
+    t.integer "bus_interface_id"
+    t.integer "videocard_memory_id"
     t.integer "led_id"
   end
 
