@@ -440,6 +440,8 @@ MotherBoard.create!(
 
     {id: 4, name: 'ROG STRIX X570-F GAMING', price: 27500, image: 'ROG STRIX X570-F GAMING', memory_slot: 4, max_memory_value: 128, sli: 1, crossfire: 1, display_port: 1, hdmi: 1, usb_type_c: 1, usb3_2_gen2: 3, usb3_2_gen1: 4, pci_express_16x: 3, pci_express_1x: 2, sata_slot: 8, m2_slot: 2, chip_set_id: 16, form_factor_id: 1, cpu_socket_id: 8, memory_type_id: 1, led_id: 1, maker_id: 5, release_g: 20190707, release_ja: 20190707},
 
+    {id: 5, name: 'ROG STRIX Z390-F GAMING', price: 23000, image: 'ROG STRIX Z390-F GAMING', memory_slot: 4, max_memory_value: 64, sli: 1, crossfire: 1, display_port: 1, hdmi: 1, usb_type_c: 1, usb3_2gen_2: 3, usb3_2_gen1: 2, usb2_0: 2, pci_express_16x: 3, pci_express_1x: 3, sata_slot: 6, m2_slot: 2, chip_set_id: 1, form_factor_id: 1, cpu_socket_id: 3, memory_type_id: 1, led_id: 1, maker_id: 5, release_g: 20181009, release_ja: 20181009},
+
     # {id: 4, name: 'ROG STRIX X570-F GAMING', price: 27500, image: 'ROG STRIX X570-F GAMING', memory_slot: 4, max_memory_value: 128, sli: 1, crossfire: 1, display_port: 1, mini_display_port: NULL, hdmi: 1, usb_type_c: 1, thunderbolt3: NULL, usb3_2_gen_2x2: NULL, usb3_2gen_2: 3, usb3_2_gen1: 4, usb2_0: NULL, pci_express_16x: 3, pci_express_8x: NULL, pci_express_4x: 0, pci_express_1x: 2, sata_slot: 8, m2_slot: 2, chip_set_id: 16, form_factor_id: 1, cpu_socket_id: 8, memory_type_id: 1, led_id: 1, maker_id: 5, release_g: 20190707, release_ja: 20190707},
   ]
 )
