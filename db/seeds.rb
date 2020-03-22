@@ -457,4 +457,14 @@ Memory.create!(
     # {id: 1, name: '', price: , image: , value_per_card: , card: , memory_speed: , ecc: , release_g: , release_ja: , maker_id: , memory_specification_id: , memory_interface_id: ,},
   ]
 )
+
+Videocard.create!(
+  [
+    {id: 1, name: 'ROG-STRIX-RTX2080TI-O11G-GAMING', price: 162000, image: 'ROG-STRIX-RTX2080TI-O11G-GAMING', release_g: 20181105, release_ja: 20181105, sli: 1,  videocard_memory_value: 11, auxiliary_power: 250, hdmi: 2, display_port: 2, usb_type_c: 1, pin8: 2, maker_id: 5, developer_id: 3, videocard_chip_id: 1, bus_interface_id: 2, videocard_memory_id: 1, led_id: 1},
+
+    {id: 2, name: 'GV-N207SGAMING OC-8GD', price: 59000, image: 'GV-N207SGAMING OC-8GD', release_g: 20191202, release_ja: 20191202, sli: 1, videocard_memory_value: 8, auxiliary_power: 215, hdmi: 1, display_port: 3, pin8: 1, pin6: 1, maker_id: 23, developer_id: 3, videocard_chip_id: 4, bus_interface_id: 2, videocard_memory_id: 1, led_id: 3},
+
+    {id: 3, name: 'EVOKE OC', price: 53000, image: 'EVOKE OC', release_g: 20190823, release_ja: 20190823, crossfire: 1, videocard_memory_value: 8, auxiliary_power: 225, hdmi: 1, display_port: 3, pin8: 1, pin6: 1, maker_id: 31, developer_id: 2, videocard_chip_id: 35, bus_interface_id: 1, videocard_memory_id: 1, led_id: 2},
+  ]
+)
 # ーーーーーーmain_table(END)ーーーーーー
