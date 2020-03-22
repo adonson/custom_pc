@@ -467,4 +467,10 @@ Videocard.create!(
     {id: 3, name: 'EVOKE OC', price: 53000, image: 'EVOKE OC', release_g: 20190823, release_ja: 20190823, crossfire: 1, videocard_memory_value: 8, auxiliary_power: 225, hdmi: 1, display_port: 3, pin8: 1, pin6: 1, maker_id: 31, developer_id: 2, videocard_chip_id: 35, bus_interface_id: 1, videocard_memory_id: 1, led_id: 2},
   ]
 )
+
+PowerUnitFactor.create!(
+  [
+    {id: 1, name: '', price: , image: , release_g: , release_ja: , power_value: , power_unit_factor_id: , plus80_id: , maker_id: },
+  ]
+)
 # ーーーーーーmain_table(END)ーーーーーー
