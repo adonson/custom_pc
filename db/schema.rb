@@ -190,7 +190,7 @@ ActiveRecord::Schema.define(version: 2020_03_20_044403) do
     t.date "release_g"
     t.date "release_ja"
     t.integer "power_value"
-    t.integer "power_unit_factors_id"
+    t.integer "power_unit_factor_id"
     t.integer "plus80_id"
     t.integer "maker_id"
   end
