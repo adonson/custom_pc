@@ -196,6 +196,8 @@ Maker.create!(
   {id: 71, name: 'Samsung'},
   {id: 72, name: 'Transcend'},
   {id: 73, name: 'BUFFALO'},
+  {id: 74, name: 'ANTEC'},
+  {id: 75, name: 'Thermaltake'},
  ]
 )
 
@@ -468,9 +470,13 @@ Videocard.create!(
   ]
 )
 
-PowerUnitFactor.create!(
+PowerUnit.create!(
   [
-    {id: 1, name: '', price: , image: , release_g: , release_ja: , power_value: , power_unit_factor_id: , plus80_id: , maker_id: },
+    {id: 1, name: 'NeoECO Gold NE750G', price: 10000, image: 'NeoECO Gold NE750G', release_g: 20171223, release_ja: 20171223, power_value: 750, power_unit_factor_id: 1, plus80_id: 3, maker_id: 74},
+
+    {id: 2, name: 'Toughpower GX1 RGB 700W', price: 10500, image: 'Toughpower GX1 RGB 700W', release_g: 20181221, release_ja: 20181221, power_value: 700, power_unit_factor_id: 1, plus80_id: 3, maker_id: 75},
+
+    {id: 3, name: 'AX1000 Titanium CP-9020152-JP', price: 33500, image: 'AX1000 Titanium CP-9020152-JP', release_g: 20190209, release_ja: 20190209, power_value: 1000, power_unit_factor_id: 1, plus80_id: 1, maker_id: 49},
   ]
 )
 # ーーーーーーmain_table(END)ーーーーーー
