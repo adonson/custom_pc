@@ -1,3 +1,15 @@
 = render "shared/header" # ヘッダー呼び出し
 .index
+  .videocard
+    - @videocards.each do |videocard|
+      .videocard__block
+        .videocard__block__image
+          = link_to videocard_path(videocard.id) do
+            - image_tag "videocard/#{videocard.image}",class: "image"
+        .videocard__block__maker  
+          = videocard.maker.name
+        .videocard__block__name
+          = videocard.name
+        .videocard__block__price
+          = "￥#{videocard.price.to_s(:delimited)}（参考価格）"
 = render "shared/footer" # フッター呼び出し
