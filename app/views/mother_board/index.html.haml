@@ -1,3 +1,15 @@
 = render "shared/header" # ヘッダー呼び出し
 .index
+  .mother_board
+    - @mother_boards.each do |mother_board|
+      .mother_board__block
+        .mother_board__block__image
+          = link_to cpu_path(mother_board.id) do
+            - image_tag "mother_board/#{mother_board.image}",class: "image"
+        .mother_board__block__maker    
+          = mother_board.maker.name
+        .mother_board__block__name
+          = mother_board.name
+        .mother_board__block__price
+          = "￥#{mother_board.price.to_s(:delimited)}（参考価格）"
 = render "shared/footer" # フッター呼び出し
