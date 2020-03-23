@@ -65,7 +65,9 @@
         font-weight: 900;
         letter-spacing: 1px;
         transition: all 150ms linear;
-        border-color: #93D5F6
+        border-color: #93D5F6;
+        margin-top:10px;
+        margin-bottom:20px;
       }
       input:hover {
         cursor: pointer;
@@ -78,6 +80,9 @@
         transition: all 250ms linear;
         border-color: #93D5F6
       }
+    }  
+    a{
+      color:black;
     }
   }
 }
