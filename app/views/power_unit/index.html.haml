@@ -1,3 +1,15 @@
 = render "shared/header" # ヘッダー呼び出し
 .index
+  .power_unit
+    - @power_units.each do |power_unit|
+      .power_unit__block
+        .power_unit__block__image
+          = link_to power_unit_path(power_unit.id) do
+            - image_tag "power_unit/#{power_unit.image}",class: "image"
+        .power_unit__block__maker  
+          = power_unit.maker.name
+        .power_unit__block__name
+          = power_unit.name
+        .power_unit__block__price
+          = "￥#{power_unit.price.to_s(:delimited)}（参考価格）"
 = render "shared/footer" # フッター呼び出し
