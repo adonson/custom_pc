@@ -4,7 +4,7 @@
     - @mother_boards.each do |mother_board|
       .mother_board__block
         .mother_board__block__image
-          = link_to cpu_path(mother_board.id) do
+          = link_to mother_board_path(mother_board.id) do
             - image_tag "mother_board/#{mother_board.image}",class: "image"
         .mother_board__block__maker    
           = mother_board.maker.name
