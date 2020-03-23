@@ -1,3 +1,15 @@
 = render "shared/header" # ヘッダー呼び出し
 .index
+  .memory
+    - @memories.each do |memory|
+      .memory__block
+        .memory__block__image
+          = link_to memory_path(memory.id) do
+            - image_tag "memory/#{memory.image}",class: "image"
+        .memory__block__maker  
+          = memory.maker.name
+        .memory__block__name
+          = memory.name
+        .memory__block__price
+          = "￥#{memory.price.to_s(:delimited)}（参考価格）"
 = render "shared/footer" # フッター呼び出し
