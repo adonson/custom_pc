@@ -482,9 +482,9 @@ PowerUnit.create!(
 
 Ssd.create!(
   [
-    {id: 1, name: '970 EVO Plus MZ-V7S500B/IT', price: 15000, image: '970 EVO Plus MZ-V7S500B/IT', release_g: 20190201, release_ja: 20190201, ssd_value: 500, nvme: 1, ssd_interface_id: 7, ssd_size_id: 7, ssd_type_id: 1, maker_id: 71},
+    {id: 1, name: '970 EVO Plus MZ-V7S500B/IT', price: 15000, image: '970 EVO Plus MZ-V7S500B:IT', release_g: 20190201, release_ja: 20190201, ssd_value: 500, nvme: 1, ssd_interface_id: 7, ssd_size_id: 7, ssd_type_id: 1, maker_id: 71},
 
-    {id: 2, name: 'MX500 CT500MX500SSD1/JP', price: 8500, image: 'MX500 CT500MX500SSD1/JP', release_g: 20180108, release_ja: 20180108, ssd_value: 500, ssd_interface_id: 1, ssd_size_id: 2, ssd_type_id: 3, maker_id: 50},
+    {id: 2, name: 'MX500 CT500MX500SSD1/JP', price: 8500, image: 'MX500 CT500MX500SSD1:JP', release_g: 20180108, release_ja: 20180108, ssd_value: 500, ssd_interface_id: 1, ssd_size_id: 2, ssd_type_id: 3, maker_id: 50},
 
   ]
 )
