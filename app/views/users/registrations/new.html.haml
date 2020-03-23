@@ -1,27 +1,27 @@
 -# ユーザ登録画面
-%h2 Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = render "devise/shared/error_messages", resource: resource
-
-  .username
-    = f.label :username
-    %br/
-    = f.text_field :username
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      %em
-        (#{@minimum_password_length} characters minimum)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .actions
-    = f.submit "Sign up"
-= render "users/shared/links"
+.registrations_new
+  %h2 アカウント作成
+  = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+    = render "devise/shared/error_messages", resource: resource
+    .field_username
+      = f.label :ユーザーネーム
+      %br/
+      = f.text_field :username
+    .field_email
+      = f.label :email
+      %br/
+      = f.email_field :email, autofocus: true, autocomplete: "email"
+    .field_password
+      = f.label :password
+      - if @minimum_password_length
+        %em
+          (#{@minimum_password_length} 文字以上の英数字)
+      %br/
+      = f.password_field :password, autocomplete: "new-password"
+    .field_password_confirmation
+      = f.label :password_confirmation
+      %br/
+      = f.password_field :password_confirmation, autocomplete: "new-password"
+    .actions
+      = f.submit "アカウント作成"
+    = render "users/shared/links"

@@ -1,0 +1,83 @@
+.registrations_new{
+  text-align: center;
+  margin:0 auto;
+  margin-top:120px;
+  padding:30px;
+  border:solid grey 1px;
+  border-radius:8px;
+  height:400px;
+  width:42.25%;
+  min-width:500px;
+  h2{
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 2.8;
+  }
+  .new_user{
+    .field_username{
+      label{
+        margin-right:190px;
+      }
+      input{
+        width:300px;
+        margin-bottom:10px;
+        border-radius:1px;
+      }
+    }
+    .field_email{
+      label{
+        margin-right:190px;
+      }
+      input{
+        width:300px;
+        margin-bottom:10px;
+        border-radius:1px;
+      }
+    }
+    .field_password{
+      label{
+
+      }
+      em{
+        margin-right:60px;
+      }
+      input{
+        width:300px;
+        margin-bottom:10px;
+        border-radius:1px;
+      }
+    }
+    .field_password_confirmation{
+      label{
+        margin-right:170px;
+      }
+      input{
+        width:300px;
+        margin-bottom:10px;
+        border-radius:1px;
+      }
+    }
+    .actions{
+      input{
+        background: lighten(#93D5F6, 3%);  
+        border: 1px solid darken(#93D5F6, 4%);
+        box-shadow: 0px 2px 0 darken(#93D5F6, 5%), 2px 4px 6px darken(#93D5F6, 2%);
+        font-weight: 900;
+        letter-spacing: 1px;
+        transition: all 150ms linear;
+        border-color: #93D5F6
+      }
+      input:hover {
+        cursor: pointer;
+        background: darken(#93D5F6, 1.5%);
+        border: 1px solid rgba(#000, .05);
+        box-shadow: 1px 1px 2px rgba(#fff, .2);
+        color: lighten(#93D5F6, 18%); 
+        text-decoration: none;
+        text-shadow: -1px -1px 0 darken(#93D5F6, 9.5%);
+        transition: all 250ms linear;
+        border-color: #93D5F6
+      }
+    }
+  }
+}
