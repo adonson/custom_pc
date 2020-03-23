@@ -1,3 +1,15 @@
 = render "shared/header" # ヘッダー呼び出し
 .index
+  .ssd
+    - @ssds.each do |ssd|
+      .ssd__block
+        .ssd__block__image
+          = link_to ssd_path(ssd.id) do
+            - image_tag "ssd/#{ssd.image}",class: "image"
+        .ssd__block__maker  
+          = ssd.maker.name
+        .ssd__block__name
+          = ssd.name
+        .ssd__block__price
+          = "￥#{ssd.price.to_s(:delimited)}（参考価格）"
 = render "shared/footer" # フッター呼び出し
