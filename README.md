@@ -54,8 +54,8 @@ Things you may want to cover:
 |form_factor_id|references|foreign_key:true|
 |memory_type_id|references|foreign_key:true|
 |memory_slot|integer||
-|sli|integer||
-|crossfire|integer||
+|sli|boolean|default: false, null: false|
+|crossfire|boolean|default: false, null: false|
 |display_port|integer||
 |mini_display_port|integer||
 |hdmi|integer||
@@ -93,7 +93,7 @@ Things you may want to cover:
 |value_per_card|integer||
 |card|integer||
 |memory_speed|integer||
-|ecc|integer||
+|ecc|boolean|default: false, null: false|
 |maker_id|references|foreign_key:true|
 |memory_specification_id|references|foreign_key:true|
 |memory_interface_id|references|foreign_key:true|
@@ -111,8 +111,8 @@ Things you may want to cover:
 |image|string||
 |release_g|date||
 |release_ja|date||
-|sli|integer||
-|crossfire|integer||
+|sli|boolean|default: false, null: false|
+|crossfire|boolean|default: false, null: false|
 |videocard_memory_value|integer||
 |auxiliary_power|integer||
 |mini_hdmi|integer||
@@ -189,7 +189,7 @@ Things you may want to cover:
 |release_g|date||
 |release_ja|date||
 |ssd_value|integer||
-|nvme|integer||
+|nvme|boolean|default: false, null: false|
 |ssd_size_id|references|foreign_key:true|
 |ssd_interface_id|references|foreign_key:true|
 |ssd_type_id|references|foreign_key:true|

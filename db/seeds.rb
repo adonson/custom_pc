@@ -435,11 +435,11 @@ Cpu.create!(
 
 MotherBoard.create!(
   [
-    {id: 1, name: 'B450 Steel Legend', price: 12000, image: 'B450 Steel Legend', memory_slot: 4, max_memory_value: 64, crossfire: 1, display_port: 1, hdmi: 1, usb_type_c: 1, usb3_2_gen2: 1, usb3_2_gen1: 4, usb2_0: 2, pci_express_16x: 2, pci_express_1x: 4, sata_slot: 6, m2_slot: 2, chip_set_id: 20, form_factor_id: 1, cpu_socket_id: 8, memory_type_id: 1, led_id: 5, maker_id: 4, release_g: 20190222, release_ja: 20190222},
+    {id: 1, name: 'B450 Steel Legend', price: 12000, image: 'B450 Steel Legend', memory_slot: 4, max_memory_value: 64, sli: 0, crossfire: 1, display_port: 1, hdmi: 1, usb_type_c: 1, usb3_2_gen2: 1, usb3_2_gen1: 4, usb2_0: 2, pci_express_16x: 2, pci_express_1x: 4, sata_slot: 6, m2_slot: 2, chip_set_id: 20, form_factor_id: 1, cpu_socket_id: 8, memory_type_id: 1, led_id: 5, maker_id: 4, release_g: 20190222, release_ja: 20190222},
 
-    {id: 2, name: 'B450 GAMING PLUS MAX', price: 11000, image: 'B450 GAMING PLUS MAX', memory_slot: 4, max_memory_value: 64, crossfire: 1, hdmi: 1, usb_type_c: 1, usb3_2_gen2: 2, usb3_2_gen1: 2, usb2_0: 2, pci_express_16x: 2, pci_express_1x: 4, sata_slot: 6, m2_slot: 1, chip_set_id: 20, form_factor_id: 1, cpu_socket_id: 8, memory_type_id: 1, led_id: 2, maker_id: 31, release_g: 20190809, release_ja: 20190809},
+    {id: 2, name: 'B450 GAMING PLUS MAX', price: 11000, image: 'B450 GAMING PLUS MAX', memory_slot: 4, max_memory_value: 64, sli: 0, crossfire: 1, hdmi: 1, usb_type_c: 1, usb3_2_gen2: 2, usb3_2_gen1: 2, usb2_0: 2, pci_express_16x: 2, pci_express_1x: 4, sata_slot: 6, m2_slot: 1, chip_set_id: 20, form_factor_id: 1, cpu_socket_id: 8, memory_type_id: 1, led_id: 2, maker_id: 31, release_g: 20190809, release_ja: 20190809},
 
-    {id: 3, name: 'MPG X570 GAMING PLUS', price: 17500, image: 'MPG X570 GAMING PLUS', memory_slot: 4, max_memory_value: 128, crossfire: 1, hdmi: 1, usb_type_c: 1, usb3_2_gen2: 1, usb3_2_gen1: 4, usb2_0: 2, pci_express_16x: 2, pci_express_1x: 3, sata_slot: 6, m2_slot: 2, chip_set_id: 16, form_factor_id: 1, cpu_socket_id: 8, memory_type_id: 1, led_id: 2, maker_id: 31, release_g: 20190707, release_ja: 20190707},
+    {id: 3, name: 'MPG X570 GAMING PLUS', price: 17500, image: 'MPG X570 GAMING PLUS', memory_slot: 4, max_memory_value: 128, sli: 0, crossfire: 1, hdmi: 1, usb_type_c: 1, usb3_2_gen2: 1, usb3_2_gen1: 4, usb2_0: 2, pci_express_16x: 2, pci_express_1x: 3, sata_slot: 6, m2_slot: 2, chip_set_id: 16, form_factor_id: 1, cpu_socket_id: 8, memory_type_id: 1, led_id: 2, maker_id: 31, release_g: 20190707, release_ja: 20190707},
 
     {id: 4, name: 'ROG STRIX X570-F GAMING', price: 27500, image: 'ROG STRIX X570-F GAMING', memory_slot: 4, max_memory_value: 128, sli: 1, crossfire: 1, display_port: 1, hdmi: 1, usb_type_c: 1, usb3_2_gen2: 3, usb3_2_gen1: 4, pci_express_16x: 3, pci_express_1x: 2, sata_slot: 8, m2_slot: 2, chip_set_id: 16, form_factor_id: 1, cpu_socket_id: 8, memory_type_id: 1, led_id: 1, maker_id: 5, release_g: 20190707, release_ja: 20190707},
 
@@ -451,11 +451,11 @@ MotherBoard.create!(
 
 Memory.create!(
   [
-    {id: 1, name: 'CMK16GX4M2A2666C16', price: 9000, image: 'CMK16GX4M2A2666C16', value_per_card: 8, card: 2, memory_speed: 2666, release_g: 20150731, release_ja: 20150731, maker_id: 49, memory_specification_id: 1, memory_interface_id: 1,},
+    {id: 1, name: 'CMK16GX4M2A2666C16', price: 9000, image: 'CMK16GX4M2A2666C16', value_per_card: 8, card: 2, memory_speed: 2666, ecc: 0, release_g: 20150731, release_ja: 20150731, maker_id: 49, memory_specification_id: 1, memory_interface_id: 1,},
 
-    {id: 2, name: 'CT2K8G4DFS832A', price: 8300, image: 'CT2K8G4DFS832A', value_per_card: 8, card: 2, memory_speed: 3200, release_g: 20190411, release_ja: 20190411, maker_id: 50, memory_specification_id: 1, memory_interface_id: 1,},
+    {id: 2, name: 'CT2K8G4DFS832A', price: 8300, image: 'CT2K8G4DFS832A', value_per_card: 8, card: 2, memory_speed: 3200, ecc: 0, release_g: 20190411, release_ja: 20190411, maker_id: 50, memory_specification_id: 1, memory_interface_id: 1,},
 
-    {id: 3, name: 'F4-2666C19D-16GNT', price: 7500, image: 'F4-2666C19D-16GNT', value_per_card: 8, card: 2, memory_speed: 2666, release_g: 20180326, release_ja: 20180326, maker_id: 52, memory_specification_id: 1, memory_interface_id: 1,},
+    {id: 3, name: 'F4-2666C19D-16GNT', price: 7500, image: 'F4-2666C19D-16GNT', value_per_card: 8, card: 2, memory_speed: 2666, ecc: 0, release_g: 20180326, release_ja: 20180326, maker_id: 52, memory_specification_id: 1, memory_interface_id: 1,},
 
     # {id: 1, name: '', price: , image: , value_per_card: , card: , memory_speed: , ecc: , release_g: , release_ja: , maker_id: , memory_specification_id: , memory_interface_id: ,},
   ]
@@ -463,11 +463,11 @@ Memory.create!(
 
 Videocard.create!(
   [
-    {id: 1, name: 'ROG-STRIX-RTX2080TI-O11G-GAMING', price: 162000, image: 'ROG-STRIX-RTX2080TI-O11G-GAMING', release_g: 20181105, release_ja: 20181105, sli: 1,  videocard_memory_value: 11, auxiliary_power: 250, hdmi: 2, display_port: 2, usb_type_c: 1, pin8: 2, maker_id: 5, developer_id: 3, videocard_chip_id: 1, bus_interface_id: 2, videocard_memory_id: 1, led_id: 1},
+    {id: 1, name: 'ROG-STRIX-RTX2080TI-O11G-GAMING', price: 162000, image: 'ROG-STRIX-RTX2080TI-O11G-GAMING', release_g: 20181105, release_ja: 20181105, sli: 1, crossfire: 0,  videocard_memory_value: 11, auxiliary_power: 250, hdmi: 2, display_port: 2, usb_type_c: 1, pin8: 2, maker_id: 5, developer_id: 3, videocard_chip_id: 1, bus_interface_id: 2, videocard_memory_id: 1, led_id: 1},
 
-    {id: 2, name: 'GV-N207SGAMING OC-8GD', price: 59000, image: 'GV-N207SGAMING OC-8GD', release_g: 20191202, release_ja: 20191202, sli: 1, videocard_memory_value: 8, auxiliary_power: 215, hdmi: 1, display_port: 3, pin8: 1, pin6: 1, maker_id: 23, developer_id: 3, videocard_chip_id: 4, bus_interface_id: 2, videocard_memory_id: 1, led_id: 3},
+    {id: 2, name: 'GV-N207SGAMING OC-8GD', price: 59000, image: 'GV-N207SGAMING OC-8GD', release_g: 20191202, release_ja: 20191202, sli: 1, crossfire: 0, videocard_memory_value: 8, auxiliary_power: 215, hdmi: 1, display_port: 3, pin8: 1, pin6: 1, maker_id: 23, developer_id: 3, videocard_chip_id: 4, bus_interface_id: 2, videocard_memory_id: 1, led_id: 3},
 
-    {id: 3, name: 'EVOKE OC', price: 53000, image: 'EVOKE OC', release_g: 20190823, release_ja: 20190823, crossfire: 1, videocard_memory_value: 8, auxiliary_power: 225, hdmi: 1, display_port: 3, pin8: 1, pin6: 1, maker_id: 31, developer_id: 2, videocard_chip_id: 35, bus_interface_id: 1, videocard_memory_id: 1, led_id: 2},
+    {id: 3, name: 'EVOKE OC', price: 53000, image: 'EVOKE OC', release_g: 20190823, release_ja: 20190823, sli: 0, crossfire: 1, videocard_memory_value: 8, auxiliary_power: 225, hdmi: 1, display_port: 3, pin8: 1, pin6: 1, maker_id: 31, developer_id: 2, videocard_chip_id: 35, bus_interface_id: 1, videocard_memory_id: 1, led_id: 2},
   ]
 )
 
@@ -485,8 +485,7 @@ Ssd.create!(
   [
     {id: 1, name: '970 EVO Plus MZ-V7S500B/IT', price: 15000, image: '970 EVO Plus MZ-V7S500B:IT', release_g: 20190201, release_ja: 20190201, ssd_value: 500, nvme: 1, ssd_interface_id: 7, ssd_size_id: 7, ssd_type_id: 1, maker_id: 71},
 
-    {id: 2, name: 'MX500 CT500MX500SSD1/JP', price: 8500, image: 'MX500 CT500MX500SSD1:JP', release_g: 20180108, release_ja: 20180108, ssd_value: 500, ssd_interface_id: 1, ssd_size_id: 2, ssd_type_id: 3, maker_id: 50},
-
+    {id: 2, name: 'MX500 CT500MX500SSD1/JP', price: 8500, image: 'MX500 CT500MX500SSD1:JP', release_g: 20180108, release_ja: 20180108, ssd_value: 500, nvme: 0, ssd_interface_id: 1, ssd_size_id: 2, ssd_type_id: 3, maker_id: 50},
   ]
 )
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_26_071757) do
+ActiveRecord::Schema.define(version: 2020_03_26_112616) do
 
   create_table "bus_interfaces", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -94,7 +94,7 @@ ActiveRecord::Schema.define(version: 2020_03_26_071757) do
     t.integer "value_per_card"
     t.integer "card"
     t.integer "memory_speed"
-    t.integer "ecc"
+    t.boolean "ecc", default: false
     t.date "release_g"
     t.date "release_ja"
     t.integer "maker_id"
@@ -120,8 +120,8 @@ ActiveRecord::Schema.define(version: 2020_03_26_071757) do
     t.string "image"
     t.integer "memory_slot"
     t.integer "max_memory_value"
-    t.integer "sli"
-    t.integer "crossfire"
+    t.boolean "sli", default: false
+    t.boolean "crossfire", default: false
     t.integer "display_port"
     t.integer "mini_display_port"
     t.integer "hdmi"
@@ -218,7 +218,7 @@ ActiveRecord::Schema.define(version: 2020_03_26_071757) do
     t.date "release_g"
     t.date "release_ja"
     t.integer "ssd_value"
-    t.integer "nvme"
+    t.boolean "nvme", default: false
     t.integer "ssd_interface_id"
     t.integer "ssd_size_id"
     t.integer "ssd_type_id"
