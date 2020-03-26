@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_26_105916) do
+ActiveRecord::Schema.define(version: 2020_03_26_111614) do
 
   create_table "bus_interfaces", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -94,7 +94,7 @@ ActiveRecord::Schema.define(version: 2020_03_26_105916) do
     t.integer "value_per_card"
     t.integer "card"
     t.integer "memory_speed"
-    t.integer "ecc"
+    t.boolean "ecc", default: false
     t.date "release_g"
     t.date "release_ja"
     t.integer "maker_id"
