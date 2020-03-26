@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_26_112024) do
+ActiveRecord::Schema.define(version: 2020_03_26_112616) do
 
   create_table "bus_interfaces", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -218,7 +218,7 @@ ActiveRecord::Schema.define(version: 2020_03_26_112024) do
     t.date "release_g"
     t.date "release_ja"
     t.integer "ssd_value"
-    t.integer "nvme"
+    t.boolean "nvme", default: false
     t.integer "ssd_interface_id"
     t.integer "ssd_size_id"
     t.integer "ssd_type_id"
