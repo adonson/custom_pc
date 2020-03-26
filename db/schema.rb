@@ -10,38 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_20_044403) do
+ActiveRecord::Schema.define(version: 2020_03_26_071757) do
 
   create_table "bus_interfaces", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
-  end
-
-  create_table "case_factors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "case_id", null: false
-    t.integer "factor_id", null: false
-  end
-
-  create_table "cases", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name", null: false
-    t.integer "price"
-    t.string "image"
-    t.date "release_g"
-    t.date "release_ja"
-    t.integer "shadow_bay_2_5"
-    t.integer "shadow_bay_3_5"
-    t.integer "bay_3_5"
-    t.integer "bay_5_2_5"
-    t.string "color"
-    t.integer "usb_type_c"
-    t.integer "usb3_1"
-    t.integer "usb3_0"
-    t.integer "usb2_0"
-    t.integer "mic"
-    t.integer "headphone"
-    t.integer "width"
-    t.integer "height"
-    t.integer "depth"
-    t.integer "maker_id"
   end
 
   create_table "chip_sets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -173,6 +145,34 @@ ActiveRecord::Schema.define(version: 2020_03_20_044403) do
     t.integer "maker_id"
     t.date "release_g"
     t.date "release_ja"
+  end
+
+  create_table "pc_case_factors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "pc_case_id", null: false
+    t.integer "factor_id", null: false
+  end
+
+  create_table "pc_cases", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "price"
+    t.string "image"
+    t.date "release_g"
+    t.date "release_ja"
+    t.integer "shadow_bay_2_5"
+    t.integer "shadow_bay_3_5"
+    t.integer "bay_3_5"
+    t.integer "bay_5_2_5"
+    t.string "color"
+    t.integer "usb_type_c"
+    t.integer "usb3_1"
+    t.integer "usb3_0"
+    t.integer "usb2_0"
+    t.integer "mic"
+    t.integer "headphone"
+    t.integer "width"
+    t.integer "height"
+    t.integer "depth"
+    t.integer "maker_id"
   end
 
   create_table "plus80s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

@@ -1,3 +1,15 @@
 = render "shared/header" # ヘッダー呼び出し
 .index
+  .cpu_cooler
+    - @cpu_coolers.each do |cpu_cooler|
+      .cpu_cooler__block
+        .cpu_cooler__block__image
+          = link_to cpu_cooler_path(cpu_cooler.id) do
+            - image_tag "cpu_cooler/#{cpu_cooler.image}",class: "image"
+        .cpu_cooler__block__maker    
+          = cpu_cooler.maker.name
+        .cpu_cooler__block__name
+          = cpu_cooler.name
+        .cpu_cooler__block__price
+          = "￥#{cpu_cooler.price.to_s(:delimited)}（参考価格）"
 = render "shared/footer" # フッター呼び出し
