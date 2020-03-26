@@ -490,7 +490,7 @@
 #   ]
 # )
 
-# Case.create!(
+# PcCase.create!(
 #   [
 #     {id: 1, name: 'Versa H26', price: 4200, image: 'CA-1J5-00M1WN-01', release_g: 20171102, release_ja: 20171102, shadow_bay_2_5: 3, shadow_bay_3_5: 2, bay_5_2_5: 2, color: 'ブラック', usb3_0: 2, usb2_0: 2, mic: 1, headphone: 1, width: 220, height: 493, depth: 464, maker_id: 75},
 
@@ -500,14 +500,14 @@
 #   ]
 # )
 
-# CaseFactor.create(
+# PcCaseFactor.create(
 #   [
-#     {id: 1, case_id: 1, factor_id: 1},
-#     {id: 2, case_id: 1, factor_id: 2},
-#     {id: 3, case_id: 1, factor_id: 5},
-#     {id: 4, case_id: 2, factor_id: 1},
-#     {id: 5, case_id: 2, factor_id: 2},
-#     {id: 6, case_id: 2, factor_id: 5},
+#     {id: 1, pc_case_id: 1, factor_id: 1},
+#     {id: 2, pc_case_id: 1, factor_id: 2},
+#     {id: 3, pc_case_id: 1, factor_id: 5},
+#     {id: 4, pc_case_id: 2, factor_id: 1},
+#     {id: 5, pc_case_id: 2, factor_id: 2},
+#     {id: 6, pc_case_id: 2, factor_id: 5},
 #   ]
 # )
 

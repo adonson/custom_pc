@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   resources :mother_board, only: [:index, :show]
   resources :memory, only: [:index, :show]
   resources :videocard, only: [:index, :show]
-  resources :case, only: [:index, :show]
+  resources :pc_case, only: [:index, :show]
   resources :power_unit, only: [:index, :show]
   resources :ssd, only: [:index, :show]
   resources :cpu_cooler, only: [:index, :show]

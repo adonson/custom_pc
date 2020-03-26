@@ -137,7 +137,7 @@ Things you may want to cover:
 - belongs_to :bus_interface
 - belongs_to :videocard_memory
 - belongs_to :led
-## cases table
+## pc_cases table
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null:false|
@@ -232,7 +232,7 @@ Things you may want to cover:
 - has_many :mother_boards
 - has_many :memories
 - has_many :videocards
-- has_many :cases
+- has_many :pc_cases
 - has_many :power_units
 - has_many :ssds
 - has_many :cpu_coolers
@@ -312,14 +312,14 @@ Things you may want to cover:
 |name|string|unique: true,null: false|
 ### association
 - has_many :case_factors
-- has_many :cases, through: :case_factor
+- has_many :pc_cases, through: :case_factor
 ## case_factor table
 |Column|Type|Options|
 |------|----|-------|
-|case_id|references|null:false,foreign_key:true|
+|pc_case_id|references|null:false,foreign_key:true|
 |factor_id|references|null:false,foreign_key:true|
 ### association
-- belongs_to :case
+- belongs_to :pc_case
 - belongs_to :factor
 ## power_unit_factor table
 |Column|Type|Options|
