@@ -488,4 +488,25 @@ Ssd.create!(
 
   ]
 )
+
+Case.create!(
+  [
+    {id: 1, name: 'Versa H26', price: 4200, image: 'CA-1J5-00M1WN-01', release_g: 20171102, release_ja: 20171102, shadow_bay_2_5: 3, shadow_bay_3_5: 2, bay_5_2_5: 2, color: 'ブラック', usb3_0: 2, usb2_0: 2, mic: 1, headphone: 1, width: 220, height: 493, depth: 464, maker_id: 75},
+
+    {id: 2, name: 'Versa H26', price: 4200, image: 'CA-1J5-00M6WN-01', release_g: 20171102, release_ja: 20171102, shadow_bay_2_5: 3, shadow_bay_3_5: 2, bay_5_2_5: 2, color: 'ホワイト', usb3_0: 2, usb2_0: 2, mic: 1, headphone: 1, width: 220, height: 493, depth: 464, maker_id: 75},
+
+    # {id: 1, name: '', price: , image: '', release_g: , release_ja: , shadow_bay_2_5: , shadow_bay_3_5: , bay_3_5: , bay_5_2_5: , color: , usb_type_c: , usb3_1: , usb3_0: , usb2_0: , mic: , headphone: , width: , height: , depth: , maker_id: },
+  ]
+)
+
+CaseFactor.create(
+  [
+    {id: 1, case_id: 1, factor_id: 1},
+    {id: 2, case_id: 1, factor_id: 2},
+    {id: 3, case_id: 1, factor_id: 5},
+    {id: 4, case_id: 2, factor_id: 1},
+    {id: 5, case_id: 2, factor_id: 2},
+    {id: 6, case_id: 2, factor_id: 5},
+  ]
+)
 # ーーーーーーmain_table(END)ーーーーーー
