@@ -1,3 +1,15 @@
 = render "shared/header" # ヘッダー呼び出し
 .index
+  .pc_case
+    - @pc_cases.each do |pc_case|
+      .pc_case__block
+        .pc_case__block__image
+          = link_to pc_case_path(pc_case.id) do
+            - image_tag "pc_case/#{pc_case.image}",class: "image"
+        .pc_case__block__maker    
+          = pc_case.maker.name
+        .pc_case__block__name
+          = pc_case.name
+        .pc_case__block__price
+          = "￥#{pc_case.price.to_s(:delimited)}（参考価格）"
 = render "shared/footer" # フッター呼び出し
