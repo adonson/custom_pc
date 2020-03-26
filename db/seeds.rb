@@ -451,11 +451,11 @@ MotherBoard.create!(
 
 Memory.create!(
   [
-    {id: 1, name: 'CMK16GX4M2A2666C16', price: 9000, image: 'CMK16GX4M2A2666C16', value_per_card: 8, card: 2, memory_speed: 2666, release_g: 20150731, release_ja: 20150731, maker_id: 49, memory_specification_id: 1, memory_interface_id: 1,},
+    {id: 1, name: 'CMK16GX4M2A2666C16', price: 9000, image: 'CMK16GX4M2A2666C16', value_per_card: 8, card: 2, memory_speed: 2666, ecc: 0, release_g: 20150731, release_ja: 20150731, maker_id: 49, memory_specification_id: 1, memory_interface_id: 1,},
 
-    {id: 2, name: 'CT2K8G4DFS832A', price: 8300, image: 'CT2K8G4DFS832A', value_per_card: 8, card: 2, memory_speed: 3200, release_g: 20190411, release_ja: 20190411, maker_id: 50, memory_specification_id: 1, memory_interface_id: 1,},
+    {id: 2, name: 'CT2K8G4DFS832A', price: 8300, image: 'CT2K8G4DFS832A', value_per_card: 8, card: 2, memory_speed: 3200, ecc: 0, release_g: 20190411, release_ja: 20190411, maker_id: 50, memory_specification_id: 1, memory_interface_id: 1,},
 
-    {id: 3, name: 'F4-2666C19D-16GNT', price: 7500, image: 'F4-2666C19D-16GNT', value_per_card: 8, card: 2, memory_speed: 2666, release_g: 20180326, release_ja: 20180326, maker_id: 52, memory_specification_id: 1, memory_interface_id: 1,},
+    {id: 3, name: 'F4-2666C19D-16GNT', price: 7500, image: 'F4-2666C19D-16GNT', value_per_card: 8, card: 2, memory_speed: 2666, ecc: 0, release_g: 20180326, release_ja: 20180326, maker_id: 52, memory_specification_id: 1, memory_interface_id: 1,},
 
     # {id: 1, name: '', price: , image: , value_per_card: , card: , memory_speed: , ecc: , release_g: , release_ja: , maker_id: , memory_specification_id: , memory_interface_id: ,},
   ]
