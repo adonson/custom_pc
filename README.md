@@ -18,6 +18,33 @@ Things you may want to cover:
 # Database creation （DB設計）
 ## users table
 
+## j-pc
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null:false|
+|user_id|references|foreign_key:true|
+|cpu_id|references|foreign_key:true|
+|cpu_pic|integer||
+|mother_board_id|references|foreign_key:true|
+|momory_id|references|foreign_key:true|
+|memory_pic|integer||
+|videocard_id|references|foreign_key:true|
+|videocard_pic|integer||
+|pc_case_id|references|foreign_key:true|
+|power_unit_id|references|foreign_key:true|
+|ssd_id|references|foreign_key:true|
+|ssd_pic|||
+|cpu_cooler_id|references|foreign_key:true|
+### association
+- has_many :user
+- has_many :cpu
+- has_many :mother_board
+- has_many :memory
+- has_many :videocard
+- has_many :pc_case
+- has_many :power_unit
+- has_many :ssd
+- has_many :cpu_cooler
 ## cpus table
 |Column|Type|Options|
 |------|----|-------|
@@ -344,13 +371,13 @@ Things you may want to cover:
 |------|----|-------|
 |name|string|unique: true,null: false|
 ### association
-- belongs_to :ssd
+- has_many :ssd
 ## ssd_type
 |Column|Type|Options|
 |------|----|-------|
 |name|string|unique: true,null: false|
 ### association
-- belongs_to :ssd
+- has_many :ssd
 ## cpu_cooler_cpu_socket
 |Column|Type|Options|
 |------|----|-------|
