@@ -35,6 +35,7 @@ Things you may want to cover:
 |ssd_id|references|foreign_key:true|
 |ssd_pic|||
 |cpu_cooler_id|references|foreign_key:true|
+|private|boolean|default: false, null: false|
 ### association
 - belongs_to :user
 - belongs_to :cpu
