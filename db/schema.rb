@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_26_112616) do
+ActiveRecord::Schema.define(version: 2020_03_29_074508) do
 
   create_table "bus_interfaces", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -77,6 +77,26 @@ ActiveRecord::Schema.define(version: 2020_03_26_112616) do
 
   create_table "form_factors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
+  end
+
+  create_table "j_pcs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "cpu_pic"
+    t.integer "memory_pic"
+    t.integer "videocard_pic"
+    t.integer "ssd_pic"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.integer "cpu_id"
+    t.integer "mother_board_id"
+    t.integer "memory_id"
+    t.integer "videocard_id"
+    t.integer "pc_case_id"
+    t.integer "power_unit_id"
+    t.integer "ssd_id"
+    t.integer "cpu_cooler_id"
+    t.boolean "private", default: false
   end
 
   create_table "leds", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

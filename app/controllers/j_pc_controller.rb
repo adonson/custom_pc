@@ -1,4 +1,5 @@
 class JPcController < ApplicationController
+  before_action :authenticate_user!, except: [:index,:show]
   def index
     @j_pcs = JPc.all
   end
