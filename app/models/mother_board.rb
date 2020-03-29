@@ -1,9 +1,9 @@
 class MotherBoard < ApplicationRecord
-  belongs_to :chip_set
-  belongs_to :form_factor
-  belongs_to :cpu_socket
-  belongs_to :memory_type
-  belongs_to :led
-  belongs_to :maker
+  has_many :chip_set
+  has_many :form_factor
+  has_many :cpu_socket
+  has_many :memory_type
+  has_many :led
+  has_many :maker
   validates  :name, presence:true
 end

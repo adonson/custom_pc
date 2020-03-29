@@ -1,4 +1,4 @@
 class ChipSet < ApplicationRecord
-  has_many  :mother_board
-  validates :name, presence:true
+  belongs_to  :mother_board
+  validates   :name, presence:true
 end

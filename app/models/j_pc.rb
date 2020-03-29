@@ -1,0 +1,3 @@
+class JPc < ApplicationRecord
+
+end
