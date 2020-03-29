@@ -18,7 +18,7 @@ Things you may want to cover:
 # Database creation （DB設計）
 ## users table
 
-## j-pc
+## j_pc
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null:false|
