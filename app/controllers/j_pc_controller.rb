@@ -8,8 +8,20 @@ class JPcController < ApplicationController
     @j_pcs = JPc.find(params[:id])
   end
 
+  def new
+    @j_pcs = JPc.new
+  end
+
+  def create
+    @j_pcs = JPc.new(j_pc_params)
+    if @j_pc.save
+    else
+      render :new
+    end
+  end
+
   def edit
-    @j_pc = JPc.find(params[:id])
+    @j_pcs = JPc.find(params[:id])
       if current_user.id == @j_pc.user.id
       else
         redirect_to j_pc_path(@j_pc)
@@ -17,7 +29,7 @@ class JPcController < ApplicationController
   end
 
   def update
-    @j_pc = JPc.find(params[:id])
+    @j_pcs = JPc.find(params[:id])
     if @j_pc.update(j_pc_params)
       redirect_to j_pc_path(@j_pc)
     else
@@ -26,7 +38,7 @@ class JPcController < ApplicationController
   end
 
   def destroy
-    j_pc = JPc.find(params[:id])
+    j_pcs = JPc.find(params[:id])
     unless j_pc.destroy
       render :show
     end
