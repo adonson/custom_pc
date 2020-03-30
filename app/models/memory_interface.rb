@@ -1,4 +1,4 @@
 class MemoryInterface < ApplicationRecord
-  has_many  :memory
+  belongs_to  :memory
   validates :name, presence:true
 end

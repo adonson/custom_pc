@@ -1,4 +1,4 @@
 class BusInterface < ApplicationRecord
-  has_many  :videocard
-  validates :name, presence:true
+  belongs_to  :videocard
+  validates   :name, presence:true
 end

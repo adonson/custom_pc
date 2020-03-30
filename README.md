@@ -18,7 +18,7 @@ Things you may want to cover:
 # Database creation （DB設計）
 ## users table
 
-## j-pc
+## j_pc
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null:false|
@@ -35,6 +35,7 @@ Things you may want to cover:
 |ssd_id|references|foreign_key:true|
 |ssd_pic|||
 |cpu_cooler_id|references|foreign_key:true|
+|private|boolean|default: false|
 ### association
 - belongs_to :user
 - belongs_to :cpu
@@ -81,8 +82,8 @@ Things you may want to cover:
 |form_factor_id|references|foreign_key:true|
 |memory_type_id|references|foreign_key:true|
 |memory_slot|integer||
-|sli|boolean|default: false, null: false|
-|crossfire|boolean|default: false, null: false|
+|sli|boolean|default: false|
+|crossfire|boolean|default: false|
 |display_port|integer||
 |mini_display_port|integer||
 |hdmi|integer||
@@ -120,7 +121,7 @@ Things you may want to cover:
 |value_per_card|integer||
 |card|integer||
 |memory_speed|integer||
-|ecc|boolean|default: false, null: false|
+|ecc|boolean|default: false|
 |maker_id|references|foreign_key:true|
 |memory_specification_id|references|foreign_key:true|
 |memory_interface_id|references|foreign_key:true|
@@ -138,8 +139,8 @@ Things you may want to cover:
 |image|string||
 |release_g|date||
 |release_ja|date||
-|sli|boolean|default: false, null: false|
-|crossfire|boolean|default: false, null: false|
+|sli|boolean|default: false|
+|crossfire|boolean|default: false|
 |videocard_memory_value|integer||
 |auxiliary_power|integer||
 |mini_hdmi|integer||
@@ -216,7 +217,7 @@ Things you may want to cover:
 |release_g|date||
 |release_ja|date||
 |ssd_value|integer||
-|nvme|boolean|default: false, null: false|
+|nvme|boolean|default: false|
 |ssd_size_id|references|foreign_key:true|
 |ssd_interface_id|references|foreign_key:true|
 |ssd_type_id|references|foreign_key:true|

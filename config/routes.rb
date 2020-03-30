@@ -22,4 +22,5 @@ Rails.application.routes.draw do
   resources :power_unit, only: [:index, :show]
   resources :ssd, only: [:index, :show]
   resources :cpu_cooler, only: [:index, :show]
+  resources :j_pc, only: [:index,  :new, :create, :show, :edit, :update, :destroy] 
 end

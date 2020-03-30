@@ -1,6 +1,6 @@
 class PowerUnit < ApplicationRecord
-  belongs_to :power_unit_factor
-  belongs_to :plus80
-  belongs_to :maker
+  has_many :power_unit_factor
+  has_many :plus80
+  has_many :maker
   validates  :name, presence:true
 end

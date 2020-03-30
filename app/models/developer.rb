@@ -1,5 +1,5 @@
 class Developer < ApplicationRecord
-  has_many  :cpu
-  has_many  :videocard
-  validates :name, presence:true
+  belongs_to  :cpu
+  belongs_to  :videocard
+  validates   :name, presence:true
 end
