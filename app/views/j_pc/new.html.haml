@@ -3,6 +3,7 @@
   .j_pc
     .name
     .cpu
+      = f.collection_select :cpu_id, Cpu.all, :id, :name
     .mother_board
     .memory
     .videocard
