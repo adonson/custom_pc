@@ -1,4 +1,4 @@
 class SsdInterface < ApplicationRecord
-  belongs_to  :ssd
+  has_many    :ssd
   validates   :name, presence:true
 end

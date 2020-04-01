@@ -1,4 +1,4 @@
 class MemorySpecification < ApplicationRecord
-  belongs_to  :memory
+  has_many    :memory
   validates   :name, presence:true
 end

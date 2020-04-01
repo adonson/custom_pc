@@ -1,7 +1,7 @@
 class Memory < ApplicationRecord
-  has_many    :maker
-  has_many    :memory_specification
-  has_many    :memory_interface
-  belongs_to  :j_pc
+  belongs_to  :maker
+  belongs_to  :memory_specification
+  belongs_to  :memory_interface
+  has_many    :j_pc
   validates  :name, presence:true
 end

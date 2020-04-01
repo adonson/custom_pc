@@ -1,4 +1,4 @@
 class VideocardMemory < ApplicationRecord
-  belongs_to  :videocard
+  has_many  :videocard
   validates   :name, presence:true
 end

@@ -1,4 +1,4 @@
 class FormFactor < ApplicationRecord
-  belongs_to  :mother_board
+  has_many  :mother_board
   validates   :name, presence:true
 end

@@ -1,8 +1,8 @@
 class Ssd < ApplicationRecord
-  has_many    :maker
-  has_many    :ssd_interface
-  has_many    :ssd_size
-  has_many    :ssd_type
-  belongs_to  :j_pc
+  belongs_to  :maker
+  belongs_to  :ssd_interface
+  belongs_to  :ssd_size
+  belongs_to  :ssd_type
+  has_many    :j_pc
   validates  :name, presence:true
 end
