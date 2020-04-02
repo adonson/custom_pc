@@ -9,7 +9,7 @@ class JPcController < ApplicationController
   end
 
   def new
-    @j_pcs = JPc.new 
+    @j_pcs = JPc.new
   end
 
   def create

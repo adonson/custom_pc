@@ -1,7 +1,7 @@
 = render "shared/header" # ヘッダー呼び出し
 .new
   .content
-    = form_with model: @item, local:true, class:"content" do |f|
+    = form_with model: @cpu, local:true, class:"content" do |f|
       .j_pc
         .name
           = f.text_field :name, class:"j_pc_name", placeholder: "PC名", maxlength: "20",required: true
@@ -22,8 +22,8 @@
         .cpu_cooler
           = f.collection_select :cpu_cooler_id, CpuCooler.all.order(name: :asc), :id, :name
         .private
-          %input#subscribeNews{name: "private", type: "checkbox", value: "1"}
+          %input{name: "private", type: "checkbox", value: "1"}
           %label{for: "private"} 公開する
-        .submit
-          = f.submit :name, class:"content__wrapper__confirmation__button", value: "作成する"
+      .submit
+        = f.submit :name, class:"content__wrapper__confirmation__button", value: "確認"
 = render "shared/footer" # フッター呼び出し
