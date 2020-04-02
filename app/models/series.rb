@@ -1,4 +1,4 @@
 class Series < ApplicationRecord
-  belongs_to  :cpu
+  has_many    :cpu
   validates   :name, presence:true
 end

@@ -1,7 +1,8 @@
 class CpuCooler < ApplicationRecord
-  has_many   :maker
-  has_many   :cpu_cooler_cpu_socket
-  has_many   :cpu_socket, through: :cpu_cooler_cpu_socket
+  belongs_to  :maker
+  belongs_to  :cpu_cooler_cpu_socket
+  has_many    :j_pc
+  has_many  :cpu_socket, through: :cpu_cooler_cpu_socket
   accepts_nested_attributes_for :cpu_cooler_cpu_socket
-  validates  :name, presence:true
+  validates   :name, presence:true
 end
