@@ -13,10 +13,14 @@ class JPcController < ApplicationController
   end
 
   def create
-    @j_pcs = JPc.new(j_pc_params)
-    if @j_pc.save
-    else
-      render :new
+    @j_pc = JP.new(j_pc_params)
+    respond_to do |format|
+      if @j_pc.save
+        format.html { redirect_to @j_pc, notice: '作成成功' }
+        format.json { render :show, status: :created, location: @j_pc }
+      else
+        render :new
+      end
     end
   end
 
