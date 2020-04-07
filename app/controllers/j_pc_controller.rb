@@ -1,15 +1,15 @@
 class JPcController < ApplicationController
   before_action :authenticate_user!, except: [:index,:show]
   def index
-    @j_pcs = JPc.all
+    @j_pc = JPc.all
   end
 
   def show
-    @j_pcs = JPc.find(params[:id])
+    @j_pc = JPc.find(params[:id])
   end
 
   def new
-    @j_pcs = JPc.new
+    @j_pc = JPc.new
   end
 
   def create
@@ -29,7 +29,7 @@ class JPcController < ApplicationController
   end
 
   def edit
-    @j_pcs = JPc.find(params[:id])
+    @j_pc = JPc.find(params[:id])
       if current_user.id == @j_pc.user.id
       else
         redirect_to j_pc_path(@j_pc)
@@ -37,7 +37,7 @@ class JPcController < ApplicationController
   end
 
   def update
-    @j_pcs = JPc.find(params[:id])
+    @j_pc = JPc.find(params[:id])
     if @j_pc.update(j_pc_params)
       redirect_to j_pc_path(@j_pc)
     else
@@ -46,10 +46,9 @@ class JPcController < ApplicationController
   end
 
   def destroy
-    j_pcs = JPc.find(params[:id])
+    j_pc = JPc.find(params[:id])
     unless j_pc.destroy
       render :show
     end
   end
-
 end

@@ -1,7 +1,7 @@
 = render "shared/header" # ヘッダー呼び出し
 .new
   .content
-    = form_with model: @cpu, local:true, class:"content" do |f|
+   = form_with model: @j_pc, local: true do |f|
       .j_pc
         .name
           = f.text_field :name, class:"j_pc_name", placeholder: "PC名", maxlength: "20",required: true
