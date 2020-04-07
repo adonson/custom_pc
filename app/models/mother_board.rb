@@ -5,6 +5,6 @@ class MotherBoard < ApplicationRecord
   belongs_to  :memory_type
   belongs_to  :led
   belongs_to  :maker
-  has_many    :j_pc
+  has_many    :pc
   validates   :name, presence:true
 end
