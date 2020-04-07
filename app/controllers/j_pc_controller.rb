@@ -19,9 +19,13 @@ class JPcController < ApplicationController
         format.html { redirect_to @j_pc, notice: '作成成功' }
         format.json { render :show, status: :created, location: @j_pc }
       else
-        render :new
+        format.html { render :new }
       end
     end
+  end
+
+  def j_pc_params
+    params.require(:j_pc)
   end
 
   def edit
