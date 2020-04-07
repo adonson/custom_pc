@@ -1,4 +1,4 @@
-class JPc < ApplicationRecord
+class Pc < ApplicationRecord
   belongs_to  :user
   belongs_to  :cpu
   belongs_to  :mother_board
