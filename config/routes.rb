@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  root 'top#index'
   devise_for :users, :controllers => {
     :registrations => 'users/registrations',
     :sessions => 'users/sessions'   
@@ -21,5 +21,4 @@ Rails.application.routes.draw do
   resources :power_unit, only: [:index, :show]
   resources :ssd, only: [:index, :show]
   resources :cpu_cooler, only: [:index, :show]
-  root 'top#index'
 end

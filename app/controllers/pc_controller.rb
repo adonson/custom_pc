@@ -24,9 +24,6 @@ class PcController < ApplicationController
     end
   end
 
-  def pc_params
-    params.require(:pc)
-  end
 
   def edit
     @pc = Pc.find(params[:id])
