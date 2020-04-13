@@ -1,0 +1,31 @@
+= render "shared/header" # ヘッダー呼び出し
+.index
+  = link_to new_pc_path, class: "cpuList" do
+    自作PC作成パス（NEW）
+  .content
+    = form_with model: @pcs, local:true, class:"content_wrapper" do |f|
+      .pc
+        .name
+          = f.text_field :name, class:"pc_name", placeholder: "PC名", maxlength: "20",required: true
+        .cpu
+          = f.collection_select :cpu_id, Cpu.all.order(name: :asc), :id, :name
+        .mother_board
+          = f.collection_select :mother_board_id, MotherBoard.all.order(name: :asc), :id, :name
+        .memory
+          = f.collection_select :memory_id, Memory.all.order(name: :asc), :id, :name
+        .videocard
+          = f.collection_select :videocard_id, Videocard.all.order(name: :asc), :id, :name
+        .pc_case
+          = f.collection_select :pc_case_id, PcCase.all.order(name: :asc), :id, :view_name_and_color
+        .power_unit
+          = f.collection_select :power_unit_id, PowerUnit.all.order(name: :asc), :id, :name
+        .ssd
+          = f.collection_select :ssd_id, Ssd.all.order(name: :asc), :id, :name
+        .cpu_cooler
+          = f.collection_select :cpu_cooler_id, CpuCooler.all.order(name: :asc), :id, :name
+        .private
+          %input{name: "private", type: "checkbox", value: "1"}
+          %label{for: "private"} 公開する
+      .submit
+        = f.submit :name, class:"content__wrapper__confirmation__button", value: "確認"  
+= render "shared/footer" # フッター呼び出し

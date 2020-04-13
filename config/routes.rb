@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-
   root 'top#index'
-
   devise_for :users, :controllers => {
     :registrations => 'users/registrations',
     :sessions => 'users/sessions'   
@@ -14,6 +12,7 @@ Rails.application.routes.draw do
     get "logout", :to => "users/sessions#destroy"
   end
 
+  resources :pc, only: [:index, :create, :new, :show, :edit, :update, :destroy] 
   resources :cpu, only: [:index, :show]
   resources :mother_board, only: [:index, :show]
   resources :memory, only: [:index, :show]
@@ -22,5 +21,4 @@ Rails.application.routes.draw do
   resources :power_unit, only: [:index, :show]
   resources :ssd, only: [:index, :show]
   resources :cpu_cooler, only: [:index, :show]
-  resources :j_pc, only: [:index, :new, :create, :show, :edit, :update, :destroy] 
 end

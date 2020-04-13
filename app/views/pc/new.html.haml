@@ -1,10 +1,10 @@
 = render "shared/header" # ヘッダー呼び出し
 .new
   .content
-    = form_with model: @cpu, local:true, class:"content" do |f|
-      .j_pc
+    = form_with model: @pcs, local:true, class:"wrapper" do |f|
+      .pc
         .name
-          = f.text_field :name, class:"j_pc_name", placeholder: "PC名", maxlength: "20",required: true
+          = f.text_field :name, class:"pc_name", placeholder: "PC名", maxlength: "20",required: true
         .cpu
           = f.collection_select :cpu_id, Cpu.all.order(name: :asc), :id, :name
         .mother_board

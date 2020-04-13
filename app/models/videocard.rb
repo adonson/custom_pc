@@ -5,6 +5,6 @@ class Videocard < ApplicationRecord
   belongs_to  :bus_interface
   belongs_to  :videocard_memory
   belongs_to  :led
-  has_many    :j_pc
+  has_many    :pc
   validates  :name, presence:true
 end
