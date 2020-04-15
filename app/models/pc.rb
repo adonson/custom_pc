@@ -8,5 +8,5 @@ class Pc < ApplicationRecord
   belongs_to  :power_unit
   belongs_to  :ssd
   belongs_to  :cpu_cooler
-  validates :name, presence:true
+  validates   :name, presence:true
 end

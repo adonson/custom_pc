@@ -25,7 +25,6 @@ class PcController < ApplicationController
     end
   end
 
-
   def edit
     @pc = Pc.find(params[:id])
       if current_user.id == @pc.user.id
