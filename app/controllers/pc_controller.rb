@@ -10,15 +10,15 @@ class PcController < ApplicationController
   end
 
   def new
-    @pc = Pc.new
+    @pcs = Pc.new
   end
 
   def create
-    @pc = Pc.new(pc_params)
+    @pcs = Pc.new(pc_params)
     respond_to do |format|
-      if @pc.save
-        format.html { redirect_to @pc, notice: '作成成功' }
-        format.json { render :show, status: :created, location: @pc }
+      if @pcs.save
+        format.html { redirect_to @pcs, notice: '作成成功' }
+        format.json { render :show, status: :created, location: @pcs }
       else
         format.html { render :new }
       end
@@ -26,25 +26,25 @@ class PcController < ApplicationController
   end
 
   def edit
-    @pc = Pc.find(params[:id])
-      if current_user.id == @pc.user.id
+    @pcs = Pc.find(params[:id])
+      if current_user.id == @pcs.user.id
       else
-        redirect_to pc_path(@pc)
+        redirect_to pc_path(@pcs)
       end
   end
 
   def update
-    @pc = Pc.find(params[:id])
-    if @pc.update(pc_params)
-      redirect_to pc_path(@pc)
+    @pcs = Pc.find(params[:id])
+    if @pcs.update(pc_params)
+      redirect_to pc_path(@pcs)
     else
       render :edit
     end
   end
 
   def destroy
-    pc = Pc.find(params[:id])
-    unless pc.destroy
+    pcs = Pc.find(params[:id])
+    unless pcs.destroy
       render :show
     end
   end
