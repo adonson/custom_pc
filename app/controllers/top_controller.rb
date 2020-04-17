@@ -1,5 +1,5 @@
 class TopController < ApplicationController
   def index
-    @cpu = Cpu.all
+    @cpus = Cpu.all
   end
 end
