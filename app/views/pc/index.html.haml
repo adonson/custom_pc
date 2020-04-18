@@ -1,6 +1,6 @@
 = render "shared/header" # ヘッダー呼び出し
 .index
-  = link_to new_pc_path, class: "cpuList" do
+  = link_to new_pc_path, class: "pcList" do
     自作PC作成パス（NEW）
   .content
     = form_with model: @pcs, local:true, class:"content_wrapper" do |f|
