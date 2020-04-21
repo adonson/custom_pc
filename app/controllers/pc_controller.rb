@@ -10,11 +10,11 @@ class PcController < ApplicationController
   end
 
   def new
-    @pcs = Pc.new
+    @pc = Pc.new
   end
 
   def create
-    @pcs = Pc.new(pc_params)
+    @pc = Pc.new(pc_params)
     respond_to do |format|
       if @pcs.save
         format.html { redirect_to @pcs, notice: '作成成功' }

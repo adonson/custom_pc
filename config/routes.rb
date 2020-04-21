@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     get "logout", :to => "users/sessions#destroy"
   end
 
-  resources :pc, only: [:index, :create, :new, :show, :edit, :update, :destroy] 
+  resources :pc, only: [:new, :show, :create] 
   resources :cpu, only: [:index, :show]
   resources :mother_board, only: [:index, :show]
   resources :memory, only: [:index, :show]
