@@ -2,19 +2,19 @@ class PcController < ApplicationController
   before_action :authenticate_user!, except: [:index,:show]
   
   def index
-    @pc = Pc.all
+    @pcs = Pc.all
   end
 
   def show
-    @pc = Pc.find(params[:id])
+    @pcs = Pc.find(params[:id])
   end
 
   def new
-    @pc = Pc.new
+    @pcs = Pc.new
   end
 
   def create
-    @pc = Pc.new(pc_params)
+    @pcs = Pc.new(pc_params)
     respond_to do |format|
       if @pcs.save
         format.html { redirect_to @pcs, notice: '作成成功' }
