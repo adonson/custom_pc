@@ -11,6 +11,7 @@ class PcController < ApplicationController
 
   def new
     @pcs = Pc.new
+
   end
 
   def create
@@ -47,5 +48,9 @@ class PcController < ApplicationController
     unless pcs.destroy
       render :show
     end
+  end
+
+  def pc_params
+    params.require(:pc).permit(:name,:cpu,:cpu_cooler,:memory,:mother_board,:pc_case,:power_unit,:ssd,:videocard)
   end
 end
