@@ -50,7 +50,4 @@ class PcController < ApplicationController
     end
   end
 
-  def pc_params
-    params.require(:pc).permit(:name,:cpu,:cpu_cooler,:memory,:mother_board,:pc_case,:power_unit,:ssd,:videocard)
-  end
 end
