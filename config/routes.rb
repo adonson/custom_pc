@@ -22,4 +22,3 @@ Rails.application.routes.draw do
   resources :ssd, only: [:index, :show]
   resources :cpu_cooler, only: [:index, :show]
 end
-
