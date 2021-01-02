@@ -4,7 +4,7 @@
       = image_tag "main_logo_head.png", class: "headLogo"
   .header__search
     .header__search__bar
-      %input.searchWord{:name => "keyword", :placeholder => "キーワードを入力してください", :type => "keyword", :value => ""}/
+      %input.searchWord{:name => "keyword", :placeholder => "キーワード（製品名・パーツ・メーカー）を入力してください", :type => "keyword", :value => ""}/
     .header__search__list
       .header__search__list__cpu
         = link_to cpu_index_path, class: "cpuList" do
