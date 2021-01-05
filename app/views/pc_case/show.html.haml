@@ -1,3 +1,11 @@
 = render "shared/header" # ヘッダー呼び出し
 .show
+  .pc_case
+    .pc_case__head
+    -# 注意情報
+    .pc_case__bottom
+      .pc_case__bottom__left
+        .pc_case__bottom__left__image
+          = image_tag "pc_case/#{@pc_cases.image}", class: "image"
+      .pc_case__bottom__right
 = render "shared/footer" # フッター呼び出し
