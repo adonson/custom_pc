@@ -88,4 +88,20 @@
                   0
                 = @pc_cases.headphone
             %tr
+              %td.width 幅(mm)
+              %td.p_width
+                - if @pc_cases.width.nil? 
+                  0
+                = @pc_cases.width
+              %td.height 高さ(mm)
+              %td.p_height
+                - if @pc_cases.height.nil? 
+                  0
+                = @pc_cases.height
+              %td.depth 奥行き(mm)
+              %td.p_depth
+                - if @pc_cases.depth.nil? 
+                  0
+                = @pc_cases.depth
+            %tr
 = render "shared/footer" # フッター呼び出し
