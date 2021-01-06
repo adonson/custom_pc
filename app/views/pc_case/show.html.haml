@@ -55,10 +55,27 @@
               %td.p_color
                 = @pc_cases.color
             %tr
-              %td.use_type_c usb type-c
+              %td.usb_type_c usb type-c
               %td.p_usb_type_c
                 - if @pc_cases.usb_type_c.nil? 
                   0
                 = @pc_cases.usb_type_c
             %tr
+              %td.usb3_1 usb 3.1
+              %td.p_usb3_1
+                - if @pc_cases.usb3_1.nil? 
+                  0
+                = @pc_cases.usb3_1
+              %td.usb3_0 usb 3.0
+              %td.p_usb3_0
+                - if @pc_cases.usb3_0.nil? 
+                  0
+                = @pc_cases.usb3_0
+              %td.usb2_0 usb 2.0
+              %td.p_usb2_0
+                - if @pc_cases.usb2_0.nil? 
+                  0
+                = @pc_cases.usb2_0
+            %tr
+            
 = render "shared/footer" # フッター呼び出し
