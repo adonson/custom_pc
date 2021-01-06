@@ -8,4 +8,22 @@
         .pc_case__bottom__left__image
           = image_tag "pc_case/#{@pc_cases.image}", class: "image"
       .pc_case__bottom__right
+        .table
+          %table
+            %tr
+              %td.name 名称
+              %td.p_name
+                = @pc_cases.name
+              %td.developer メーカー
+              %td.p_developer
+                = @pc_cases.maker.name
+            %tr
+              %td.release_ja 国内発売日
+              %td.p_release_ja
+                = @pc_cases.release_ja
+              %td.release_g 世界発売日
+              %td.p_release_g
+                = @pc_cases.release_g
+            %tr
+            %tr
 = render "shared/footer" # フッター呼び出し
