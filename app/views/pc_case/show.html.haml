@@ -77,5 +77,15 @@
                   0
                 = @pc_cases.usb2_0
             %tr
-            
+              %td.mic マイク端子
+              %td.p_mic
+                - if @pc_cases.mic.nil? 
+                  0
+                = @pc_cases.mic
+              %td.headphone ヘッドホン端子
+              %td.p_headphone
+                - if @pc_cases.headphone.nil? 
+                  0
+                = @pc_cases.headphone
+            %tr
 = render "shared/footer" # フッター呼び出し
