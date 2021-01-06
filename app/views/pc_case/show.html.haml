@@ -36,6 +36,8 @@
             %tr
               %td.bay_3_5 3.5インチベイ
               %td.p_bay_3_5
+                - if @pc_cases.bay_3_5.nil? 
+                  0
                 = @pc_cases.bay_3_5
             %tr
             %tr
