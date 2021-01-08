@@ -1,3 +1,11 @@
 = render "shared/header" # ヘッダー呼び出し
 .show
+  .mother_board
+    .mother_board__head
+    -# 注意情報
+    .mother_board__bottom
+      .mother_board__bottom__left
+        .mother_board__bottom__left__image
+          = image_tag "mother_board/#{@mother_boards.image}", class: "image"
+      .mother_board__bottom__right
 = render "shared/footer" # フッター呼び出し
