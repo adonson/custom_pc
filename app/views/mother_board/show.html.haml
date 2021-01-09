@@ -8,4 +8,37 @@
         .mother_board__bottom__left__image
           = image_tag "mother_board/#{@mother_boards.image}", class: "image"
       .mother_board__bottom__right
+        .table
+          %table
+            %tr.name_maker
+              %td.name 名称
+              %td.p_name
+                = @mother_boards.name
+              %td.maker メーカー
+              %td.p_maker
+                = @mother_boards.maker.name
+            %tr.release_data
+              %td.release_ja 国内発売日
+              %td.p_release_ja
+                = @mother_boards.release_ja
+              %td.release_g 世界発売日
+              %td.p_release_g
+                = @mother_boards.release_g
+            %tr.chip_set_form_factor
+              %td.chip_set チップセット
+              %td.p_chip_set
+                = @mother_boards.chip_set.name
+              %td.form_factor フォームファクター
+              %td.p_form_factor
+                = @mother_boards.form_factor.name
+            %tr.cpu_socket_memory_type
+              %td.cpu_socket CPUソケット
+              %td.p_cpu_socket
+                = @mother_boards.cpu_socket.name
+              %td.memory_type メモリータイプ
+              %td.p_memory_type
+                = @mother_boards.memory_type.name
+            %tr.sli_crossfire_display_port_mini_display_port
+              %td.sli
+              %td.p_sli SLI
 = render "shared/footer" # フッター呼び出し
