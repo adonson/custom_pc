@@ -1,3 +1,138 @@
 = render "shared/header" # ヘッダー呼び出し
 .show
+  .mother_board
+    .mother_board__head
+    -# 注意情報
+    .mother_board__bottom
+      .mother_board__bottom__left
+        .mother_board__bottom__left__image
+          = image_tag "mother_board/#{@mother_boards.image}", class: "image"
+      .mother_board__bottom__right
+        .table
+          %table
+            %tr.name_maker
+              %td.name{:colspan => "6"} 名称
+              %td.p_name{:colspan => "6"}
+                = @mother_boards.name
+              %td.maker{:colspan => "6"} メーカー
+              %td.p_maker{:colspan => "6"}
+                = @mother_boards.maker.name
+            %tr.release_data
+              %td.release_ja{:colspan => "6"} 国内発売日
+              %td.p_release_ja{:colspan => "6"}
+                = @mother_boards.release_ja
+              %td.release_g{:colspan => "6"} 世界発売日
+              %td.p_release_g{:colspan => "6"}
+                = @mother_boards.release_g
+            %tr.chip_set_form_factor
+              %td.chip_set{:colspan => "6"} チップセット
+              %td.p_chip_set{:colspan => "6"}
+                = @mother_boards.chip_set.name
+              %td.form_factor{:colspan => "6"} フォームファクター
+              %td.p_form_factor{:colspan => "6"}
+                = @mother_boards.form_factor.name
+            %tr.cpu_socket_memory_type
+              %td.cpu_socket{:colspan => "6"} CPUソケット
+              %td.p_cpu_socket{:colspan => "6"}
+                = @mother_boards.cpu_socket.name
+              %td.memory_type{:colspan => "6"} メモリータイプ
+              %td.p_memory_type{:colspan => "6"}
+                = @mother_boards.memory_type.name
+            %tr.sli_crossfire_display_port_mini_display_port
+              %td.sli{:colspan => "3"} SLI
+              %td.p_sli{:colspan => "3"}
+                - if @mother_boards.sli.present?
+                  対応
+                - else
+                  非対応
+              %td.crossfire{:colspan => "3"} crossfire
+              %td.p_crossfire{:colspan => "3"}
+                - if @mother_boards.crossfire.present?
+                  対応
+                - else
+                  非対応
+              %td.display_port{:colspan => "3"} DisplayPort
+              %td.p_display_port{:colspan => "3"}
+                - if @mother_boards.display_port.nil? 
+                  0
+                = @mother_boards.display_port
+              %td.mini_display_port{:colspan => "3"} mini-DisplayPort
+              %td.p_mini_display_port{:colspan => "3"}
+                - if @mother_boards.mini_display_port.nil? 
+                  0
+                = @mother_boards.mini_display_port
+            %tr.hdmi_usb_c_thunderbolt3
+              %td.hdmi{:colspan => "4"}  HDMI
+              %td.p_hdmi{:colspan => "4"}
+                - if @mother_boards.hdmi.nil?
+                  0
+                = @mother_boards.hdmi
+              %td.usb_type_c{:colspan => "4"}  USB-C
+              %td.p_usb_type_c{:colspan => "4"}
+                - if @mother_boards.usb_type_c.nil?
+                  0
+                = @mother_boards.usb_type_c
+              %td.thunderbolt3{:colspan => "4"}  Thunderbolt-3
+              %td.p_thunderbolt3{:colspan => "4"}
+                - if @mother_boards.thunderbolt3.nil?
+                  0
+                = @mother_boards.thunderbolt3
+            %tr.usb
+              %td.usb3_2_gen2x2{:colspan => "3"} USB3.2 Gen2x2
+              %td.p_usb3_2_gen2x2{:colspan => "3"}
+                - if @mother_boards.usb3_2_gen2x2.nil?
+                  0
+                = @mother_boards.usb3_2_gen2x2
+              %td.usb3_2_gen2{:colspan => "3"} USB3.2 Gen2
+              %td.p_usb3_2_gen2{:colspan => "3"}
+                - if @mother_boards.usb3_2_gen2.nil?
+                  0
+                = @mother_boards.usb3_2_gen2
+              %td.usb3_2_gen1{:colspan => "3"} USB3.2 Gen1
+              %td.p_usb3_2_gen1{:colspan => "3"}
+                - if @mother_boards.usb3_2_gen1.nil?
+                  0
+                = @mother_boards.usb3_2_gen1
+              %td.usb2_0{:colspan => "3"} USB2.0
+              %td.p_usb2_0{:colspan => "3"}
+                - if @mother_boards.usb2_0.nil?
+                  0
+                = @mother_boards.usb2_0
+            %tr.pci
+              %td.pci_express_16x{:colspan => "3"} PCI Express 16x
+              %td.p_pci_express_16x{:colspan => "3"}
+                - if @mother_boards.pci_express_16x.nil?
+                  0
+                = @mother_boards.pci_express_16x
+              %td.pci_express_8x{:colspan => "3"} PCI Express x8
+              %td.p_pci_express_8x{:colspan => "3"}
+                - if @mother_boards.pci_express_8x.nil?
+                  0
+                = @mother_boards.pci_express_8x
+              %td.pci_express_4x{:colspan => "3"} PCI Express 4x
+              %td.p_pci_express_4x{:colspan => "3"}
+                - if @mother_boards.pci_express_4x.nil?
+                  0
+                = @mother_boards.pci_express_4x
+              %td.pci_express_1x{:colspan => "3"} PCI Express 1x
+              %td.p_pci_express_1x{:colspan => "3"}
+                - if @mother_boards.pci_express_1x.nil?
+                  0
+                = @mother_boards.pci_express_1x
+            %tr.sata.m2.led
+              %td.sata_slot{:colspan => "4"} SATA
+              %td.p_sata_slot{:colspan => "4"}
+                - if @mother_boards.sata_slot.nil?
+                  0
+                = @mother_boards.sata_slot
+              %td.m2_slot{:colspan => "4"} m.2
+              %td.p_m2_slot{:colspan => "4"}
+                - if @mother_boards.m2_slot.nil?
+                  0
+                = @mother_boards.m2_slot
+              %td.led{:colspan => "4"} LED
+              %td.p_led{:colspan => "4"}
+                - if @mother_boards.led_id.nil?
+                  なし
+                = @mother_boards.led.name
 = render "shared/footer" # フッター呼び出し
