@@ -1,3 +1,11 @@
 = render "shared/header" # ヘッダー呼び出し
 .show
+  .memory
+    .memory__head
+      -# 注意情報
+    .memory__bottom
+      .memory__bottom__left
+        .memory__bottom__left__image
+          = image_tag "memory/#{@memories.image}", class: "image"
+      .memory__bottom__right
 = render "shared/footer" # フッター呼び出し
