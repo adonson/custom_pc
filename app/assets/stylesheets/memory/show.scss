@@ -1,0 +1,19 @@
+.show{
+  .memory{
+    &__head{}
+    &__bottom{
+      width:80%;
+      display:flex;
+      &__left{
+        width:50%;
+        &__image{
+          img.image{
+            width:550px;
+            height:420px;
+            margin-top:50px;
+          }
+        }
+      }
+    }
+  }
+}
