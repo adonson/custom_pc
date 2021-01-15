@@ -1,3 +1,13 @@
 = render "shared/header" # ヘッダー呼び出し
 .show
+  .videocard
+    .videocard
+      -# 注意情報
+    .videocard__bottom
+      .videocard__bottom__left
+        .videocard__bottom__left__image
+          = image_tag "videocard/#{@videocards.image}", class: "image"
+      .videocard__bottom__right
+        .table
+          %table
 = render "shared/footer" # フッター呼び出し
