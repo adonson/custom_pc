@@ -1,3 +1,51 @@
 = render "shared/header" # ヘッダー呼び出し
 .show
+  .memory
+    .memory__head
+      -# 注意情報
+    .memory__bottom
+      .memory__bottom__left
+        .memory__bottom__left__image
+          = image_tag "memory/#{@memories.image}", class: "image"
+      .memory__bottom__right
+        .table
+          %table
+            %tr.name_maker
+              %td.name 名称
+              %td.p_name
+                = @memories.name
+              %td.maker メーカー
+              %td.p_maker
+                = @memories.maker.name
+            %tr.release_data
+              %td.release_ja 国内発売日
+              %td.p_release_ja
+                = @memories.release_ja
+              %td.release_g 世界発売日
+              %td.p_release_g
+                = @memories.release_g
+            %tr.value_card
+              %td.value 容量（1枚あたり）
+              %td.p_value
+                = "#{@memories.value_per_card}GB"
+              %td.card 枚数
+              %td.p_card
+                = "#{@memories.card}枚"
+            %tr.specification_interface
+              %td.specification メモリー規格
+              %td.p_specification
+                = @memories.memory_specification.name
+              %td.interface メモリーインターフェイス
+              %td.p_interface
+                = @memories.memory_interface.name
+            %tr.speed_ecc
+              %td.speed メモリークロック
+              %td.p_speed
+                = "#{@memories.memory_speed}MHz"
+              %td.ecc ECC
+              %td.p_ecc
+                - if @memories.ecc.present?
+                  対応
+                - else
+                  非対応
 = render "shared/footer" # フッター呼び出し
