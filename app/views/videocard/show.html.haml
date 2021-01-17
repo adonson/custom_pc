@@ -10,4 +10,102 @@
       .videocard__bottom__right
         .table
           %table
+            %tr.name_maker_developer
+              %td.name 名称
+              %td.p_name
+                = @videocards.name
+              %td.maker メーカー
+              %td.p_maker
+                = @videocards.maker.name
+              %td.developer チップメーカー
+              %td.p_developer
+                = @videocards.developer.name
+            %tr.release_data
+              %td.release_ja 国内発売日
+              %td.p_release_ja
+                = @videocards.release_ja
+              %td.release_g 世界発売日
+              %td.p_release_g
+                = @videocards.release_g
+            %tr.sli_crossfire
+              %td.sli SLI
+              %td.p_sli
+                - if @videocards.sli.present?
+                  対応
+                - else
+                  非対応
+              %td.crossfire Crossfire
+              %td.p_crossfire
+                - if @videocards.crossfire.present?
+                  対応
+                - else
+                  非対応
+            %tr.chip_interface_memory_power
+              %td.chip チップ名
+              %td.p_chip
+                = @videocards.videocard_chip.name
+              %td.interface メモリーインターフェイス
+              %td.p_interface
+                = @videocards.bus_interface.name
+              %td.memory メモリー
+              %td.p_memory
+                = @videocards.videocard_memory.name
+              %td.power 消費電力(W)
+              %td.p_power
+                = "#{@videocards.auxiliary_power}W"
+            %tr.mini_hdmi_hdmi_display_port_mini_display_port
+              %td.mini_hdmi mini-HDMI
+              %td.p_mini_hdmi
+                - if @videocards.mini_hdmi.nil?
+                  0
+                - else
+                  = @videocards.mini_hdmi
+              %td.hdmi HDMI
+              %td.p_hdmi
+                - if @videocards.hdmi.nil?
+                  0
+                - else
+                  = @videocards.hdmi
+              %td.display_port Display-Port
+              %td.p_display_port
+                - if @videocards.display_port.nil?
+                  0
+                - else
+                  = @videocards.display_port
+              %td.mini_display_port mini-Dosplay-Port
+              %td.p_mini_display_port
+                - if @videocards.mini_display_port.nil?
+                  0
+                - else
+                  = @videocards.mini_display_port
+            %tr.d_sub_div_type_c
+              %td.d_sub D-Sub
+              %td.p_d_sub
+                - if @videocards.d_sub.nil?
+                  0
+                = @videocards.d_sub
+              %td.div DIV
+              %td.p_div
+                - if @videocards.div.nil?
+                  0
+                = @videocards.div
+              %td.usb_type_c USB-type-c
+              %td.p_usb_type_c
+                - if @videocards.usb_type_c.nil?
+                  0
+                = @videocards.usb_type_c
+            %tr.pin_led
+              %td.6pin 6ピン
+              %td.p_6pin
+                - if @videocards.pin6.nil?
+                  0
+                = @videocards.pin6
+              %td.8pin 8ピン
+              %td.p_8pin
+                - if @videocards.pin8.nil?
+                  0
+                = @videocards.pin8
+              %td.led LED
+              %td.p_led
+                = @videocards.led.name
 = render "shared/footer" # フッター呼び出し
