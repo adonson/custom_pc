@@ -1,7 +1,7 @@
 = render "shared/header" # ヘッダー呼び出し
 .show
   .videocard
-    .videocard
+    .videocard__head
       -# 注意情報
     .videocard__bottom
       .videocard__bottom__left
@@ -95,13 +95,13 @@
                   0
                 = @videocards.usb_type_c
             %tr.pin_led
-              %td.6pin 6ピン
-              %td.p_6pin
+              %td.pin6 6ピン
+              %td.p_pin6
                 - if @videocards.pin6.nil?
                   0
                 = @videocards.pin6
-              %td.8pin 8ピン
-              %td.p_8pin
+              %td.pin8 8ピン
+              %td.p_pin8
                 - if @videocards.pin8.nil?
                   0
                 = @videocards.pin8
