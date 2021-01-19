@@ -1,3 +1,11 @@
 = render "shared/header" # ヘッダー呼び出し
 .show
+  .power_unit
+    .power_unit__head
+      -# 注意情報
+    .power_unit__bottom
+      .power_unit__bottom__left
+        .power_unit__bottom__left__image
+          = image_tag "power_unit/#{@power_units.image}", class: "image"
+      .power_unit__bottom__right
 = render "shared/footer" # フッター呼び出し
