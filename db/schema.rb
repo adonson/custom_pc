@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_09_145835) do
+ActiveRecord::Schema.define(version: 2021_01_16_111459) do
 
   create_table "bus_interfaces", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -272,8 +272,8 @@ ActiveRecord::Schema.define(version: 2021_01_09_145835) do
     t.string "image"
     t.date "release_g"
     t.date "release_ja"
-    t.integer "sli"
-    t.integer "crossfire"
+    t.boolean "sli", default: false, null: false
+    t.boolean "crossfire", default: false, null: false
     t.integer "videocard_memory_value"
     t.integer "auxiliary_power"
     t.integer "mini_hdmi"
