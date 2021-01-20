@@ -1,3 +1,37 @@
 = render "shared/header" # ヘッダー呼び出し
 .show
+  .power_unit
+    .power_unit__head
+      -# 注意情報
+    .power_unit__bottom
+      .power_unit__bottom__left
+        .power_unit__bottom__left__image
+          = image_tag "power_unit/#{@power_units.image}", class: "image"
+      .power_unit__bottom__right
+        .table
+          %table
+            %tr.name_maker
+              %td.name 名称
+              %td.p_name
+                = @power_units.name
+              %td.maker メーカー
+              %td.p_maker
+                = @power_units.maker.name
+            %tr.release_data
+              %td.release_ja 国内発売日
+              %td.p_release_ja
+                = @power_units.release_ja
+              %td.release_g 世界発売日
+              %td.p_release_g
+                = @power_units.release_g
+            %tr.power_value_unit_factor_plus80
+              %td.power_value 電源容量(W)
+              %td.p_power_value
+                = "#{@power_units.power_value}W"
+              %td.power_unit_factor 電源ファクター
+              %td.p_power_unit_factor
+                = @power_units.power_unit_factor.name
+              %td.plus80 80Plus
+              %td.p_plus80
+                = @power_units.plus80.name
 = render "shared/footer" # フッター呼び出し
