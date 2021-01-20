@@ -1,3 +1,47 @@
 = render "shared/header" # ヘッダー呼び出し
 .show
+  .ssd
+    .ssd__head
+      -# 注意情報
+    .ssd__bottom
+      .ssd__bottom__left
+        .ssd__bottom__left__image
+          = image_tag "ssd/#{@ssds.image}", class: "image"
+      .ssd__bottom__right
+        .table
+          %table
+            %tr.name_maker
+              %td.name 名称
+              %td.p_name
+                = @ssds.name
+              %td.maker メーカー
+              %td.p_maker
+                = @ssds.maker.name
+            %tr.release_data
+              %td.release_ja 国内発売日
+              %td.p_release_ja
+                = @ssds.release_ja
+              %td.release_g 世界発売日
+              %td.p_release_g
+                = @ssds.release_g
+            %tr.value_nvme_interface
+              %td.ssd_value 容量(GB)
+              %td.p_ssd_value
+                = "#{@ssds.ssd_value}GB"
+              %td.nvme NVMe
+              %td.p_nvme
+                - if @ssds.nvme.present?
+                  対応
+                - else
+                  非対応
+              %td.ssd_interface インターフェイス
+              %td.p_ssd_interface
+                = @ssds.ssd_interface.name
+            %tr.size_type
+              %td.ssd_size サイズ
+              %td.p_ssd_size
+                = @ssds.ssd_size.name
+              %td.ssd_type 記録タイプ
+              %td.p_ssd_type
+                = @ssds.ssd_type.name
 = render "shared/footer" # フッター呼び出し
