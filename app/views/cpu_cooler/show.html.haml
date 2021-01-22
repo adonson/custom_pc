@@ -1,3 +1,41 @@
 = render "shared/header" # ヘッダー呼び出し
 .show
+  .cpu_cooler
+    .cpu_cooler__head
+      -# 注意情報
+    .cpu_cooler__bottom
+      .cpu_cooler__bottom__left
+        .cpu_cooler__bottom__left__image
+          = image_tag "cpu_cooler/#{@cpu_coolers.image}", class: "image"
+      .cpu_cooler__bottom__right
+        .table
+          %table
+            %tr.name_maker
+              %td.name 名称
+              %td.p_name
+                = @cpu_coolers.name
+              %td.maker メーカー
+              %td.p_maker
+                = @cpu_coolers.maker.name
+            %tr.release_data
+              %td.release_ja 国内発売日
+              %td.p_release_ja
+                = @cpu_coolers.release_ja
+              %td.release_g 世界発売日
+              %td.p_release_g
+                = @cpu_coolers.release_g
+              %tr.fan_pic_fan_rpm
+                %td.fan_pic ファン数
+                %td.p_fan_pic
+                  = @cpu_coolers.fan_pic
+                %td.fan_rpm ファン回転数(RPM)
+                %td.p_fan_rpm
+                  = @cpu_coolers.fan_rpm
+              %tr.fan_size_type
+                %td.fan_size ファンサイズ(mm)
+                %td.p_fan_size
+                  = "#{@cpu_coolers.fan_size}mm"
+                %td.cpu_cooler_type ファンタイプ
+                %td.p_cpu_cooler_type
+                  = @cpu_coolers.cpu_cooler_type.name
 = render "shared/footer" # フッター呼び出し
