@@ -1,9 +1,9 @@
 class PcCase < ApplicationRecord
   belongs_to    :maker
-  belongs_to    :pc_case_factor
-  has_many      :pc
-  has_many      :factor, through: :pc_case_factor
-  accepts_nested_attributes_for :pc_case_factor
+  has_many      :pc_case_factors
+  has_many      :pcs
+  has_many      :factors, through: :pc_case_factors
+  accepts_nested_attributes_for :pc_case_factors
   def view_name_and_color
     self.name + '(' + self.color + ')'
   end
