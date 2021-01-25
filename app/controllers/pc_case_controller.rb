@@ -6,6 +6,7 @@ class PcCaseController < ApplicationController
   end
 
   def show
-    @pc_cases = PcCase.find(params[:id])
+    @pc_case = PcCase.find(params[:id])
+    @pc_case_factors = @pc_case.factors
   end
 end
