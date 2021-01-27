@@ -6,6 +6,7 @@ class CpuCoolerController < ApplicationController
   end
 
   def show
-    @cpu_coolers = CpuCooler.find(params[:id])
+    @cpu_cooler = CpuCooler.find(params[:id])
+    @cpu_cooler_cpu_sockets = @cpu_cooler.cpu_sockets
   end
 end
