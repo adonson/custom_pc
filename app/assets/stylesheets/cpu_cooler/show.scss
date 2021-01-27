@@ -45,7 +45,11 @@
               }
               td.p_release_g{}
             }
-            tr.fan_pic_fan_rpm{
+            tr.socket_fan_pic_fan_rpm{
+              td.cpu_socket{
+                background-color:#E0E0E0;
+              }
+              td.p_cpu_socket{}
               td.fan_pic{
                 background-color:#E0E0E0;
               }

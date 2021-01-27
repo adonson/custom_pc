@@ -6,36 +6,41 @@
     .cpu_cooler__bottom
       .cpu_cooler__bottom__left
         .cpu_cooler__bottom__left__image
-          = image_tag "cpu_cooler/#{@cpu_coolers.image}", class: "image"
+          = image_tag "cpu_cooler/#{@cpu_cooler.image}", class: "image"
       .cpu_cooler__bottom__right
         .table
           %table
             %tr.name_maker
               %td.name 名称
               %td.p_name
-                = @cpu_coolers.name
+                = @cpu_cooler.name
               %td.maker メーカー
               %td.p_maker
-                = @cpu_coolers.maker.name
+                = @cpu_cooler.maker.name
             %tr.release_data
               %td.release_ja 国内発売日
               %td.p_release_ja
-                = @cpu_coolers.release_ja
+                = @cpu_cooler.release_ja
               %td.release_g 世界発売日
               %td.p_release_g
-                = @cpu_coolers.release_g
-              %tr.fan_pic_fan_rpm
+                = @cpu_cooler.release_g
+              %tr.socket_fan_pic_fan_rpm
+                %td.cpu_socket CPUソケット
+                %td.p_cpu_soket
+                  - @cpu_cooler_cpu_sockets.each do |cpu_socket|
+                    = cpu_socket.name
+                    %br
                 %td.fan_pic ファン数
                 %td.p_fan_pic
-                  = @cpu_coolers.fan_pic
+                  = @cpu_cooler.fan_pic
                 %td.fan_rpm ファン回転数(RPM)
                 %td.p_fan_rpm
-                  = @cpu_coolers.fan_rpm
+                  = @cpu_cooler.fan_rpm
               %tr.fan_size_type
                 %td.fan_size ファンサイズ(mm)
                 %td.p_fan_size
-                  = "#{@cpu_coolers.fan_size}mm"
+                  = "#{@cpu_cooler.fan_size}mm"
                 %td.cpu_cooler_type ファンタイプ
                 %td.p_cpu_cooler_type
-                  = @cpu_coolers.cpu_cooler_type.name
+                  = @cpu_cooler.cpu_cooler_type.name
 = render "shared/footer" # フッター呼び出し
