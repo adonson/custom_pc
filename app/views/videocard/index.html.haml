@@ -12,4 +12,5 @@
           = videocard.name
         .videocard__block__price
           = "￥#{videocard.price.to_s(:delimited)}（参考価格）"
+  = paginate @videocards
 = render "shared/footer" # フッター呼び出し

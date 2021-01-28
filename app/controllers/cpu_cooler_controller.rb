@@ -3,6 +3,8 @@ class CpuCoolerController < ApplicationController
 
   def index
     @cpu_coolers = CpuCooler.all
+    # ページネーション機能の件/ページを設定
+    @cpu_coolers = CpuCooler.all.page(params[:page]).per(20)
   end
 
   def show

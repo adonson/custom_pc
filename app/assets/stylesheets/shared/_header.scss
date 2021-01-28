@@ -27,6 +27,10 @@
     &__list{
       display: flex;
       margin-top:10px;
+      a{
+        // aタグは全て下線がないように設定
+      text-decoration: none;
+      }
       &__cpu{
         margin-left:20px;
         .cpuList{

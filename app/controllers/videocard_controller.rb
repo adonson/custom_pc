@@ -3,6 +3,8 @@ class VideocardController < ApplicationController
 
   def index
     @videocards = Videocard.all
+    # ページネーション機能の件/ページを設定
+    @videocards = Videocard.all.page(params[:page]).per(20)
   end
 
   def show

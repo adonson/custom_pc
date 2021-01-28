@@ -12,4 +12,5 @@
           = pc_case.name
         .pc_case__block__price
           = "￥#{pc_case.price.to_s(:delimited)}（参考価格）"
+  = paginate @pc_cases
 = render "shared/footer" # フッター呼び出し

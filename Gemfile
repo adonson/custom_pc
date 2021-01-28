@@ -76,3 +76,5 @@ gem 'devise-i18n'
 gem 'devise-i18n-views'
 # デバック用
 gem 'pry-byebug'
+# ページネーション機能
+gem 'kaminari'
