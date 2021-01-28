@@ -3,6 +3,8 @@ class PcCaseController < ApplicationController
 
   def index
     @pc_cases = PcCase.all
+    # ページネーション機能の件/ページを設定
+    @pc_cases = PcCase.all.page(params[:page]).per(20)
   end
 
   def show

@@ -12,4 +12,5 @@
           = power_unit.name
         .power_unit__block__price
           = "￥#{power_unit.price.to_s(:delimited)}（参考価格）"
+  = paginate @power_units
 = render "shared/footer" # フッター呼び出し

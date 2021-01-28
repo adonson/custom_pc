@@ -4,7 +4,7 @@ class CpuController < ApplicationController
   def index
     @cpus = Cpu.all
     # ページネーション機能の件/ページを設定
-    @cpus = Cpu.all.page(params[:page]).per(8)
+    @cpus = Cpu.all.page(params[:page]).per(20)
   end
 
   def show
