@@ -11,7 +11,6 @@ class PcController < ApplicationController
 
   def new
     @pc = Pc.new
-
   end
 
   def create
