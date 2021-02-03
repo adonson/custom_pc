@@ -15,6 +15,7 @@ class PcController < ApplicationController
 
   def create
     @pc = Pc.new(pc_params)
+    @pc.user_id = current_user.id
     respond_to do |format|
       if @pc.save
         format.html { redirect_to @pc, notice: '作成成功' }
@@ -48,5 +49,4 @@ class PcController < ApplicationController
       render :show
     end
   end
-
 end
