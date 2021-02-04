@@ -2,7 +2,7 @@
 = render "shared/header" # ヘッダー呼び出し
 .new
   .content
-    = form_with model: @pcs, local:true, class:"wrapper" do |f|
+    = form_with model: @pc, local:true, class:"wrapper" do |f|
       .pc
         .name
           = f.text_field :name, class:"pc_name", placeholder: "PC名", maxlength: "20",required: true
@@ -27,5 +27,5 @@
           %label{for: "private"} 公開する
       .submit
         = f.submit :name, class:"content__wrapper__confirmation__button", value: "確認"
-      = link_to "戻る", pc_index_path
+    = link_to "戻る", pc_index_path
 = render "shared/footer" # フッター呼び出し

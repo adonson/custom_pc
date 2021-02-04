@@ -78,3 +78,5 @@ gem 'devise-i18n-views'
 gem 'pry-byebug'
 # ページネーション機能
 gem 'kaminari'
+# デバック用gem
+gem 'pry-rails'

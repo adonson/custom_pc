@@ -10,25 +10,34 @@ class PcController < ApplicationController
   end
 
   def new
-    @pc = Pc.new
+    @pcs = Pc.new
   end
 
   def create
     @pc = Pc.new(pc_params)
     @pc.user_id = current_user.id
-    respond_to do |format|
-      if @pc.save
-        format.html { redirect_to @pc, notice: '作成成功' }
-        format.json { render :show, status: :created, location: @pc }
-      else
-        format.html { render :new }
-      end
+    binding.pry
+    if @pc.save
+      #saveが完了したら、一覧ページへリダイレクト
+      render 'index'
+    else
+      #saveを失敗すると新規作成ページへ
+      render 'index'
     end
+    # respond_to do |format|
+    #   if @pc.save
+    #     format.html { redirect_to @pc, notice: '作成成功' }
+    #     format.json { render :show, status: :created, location: @pc }
+    #   else
+    #     format.html { render :new }
+    #   end
+    # end
   end
 
   def edit
     @pcs = Pc.find(params[:id])
-      if current_user.id == @pcs.user.id
+      if 
+        current_user.id == @pcs.user.id
       else
         redirect_to pc_path(@pcs)
       end
@@ -48,5 +57,10 @@ class PcController < ApplicationController
     unless pcs.destroy
       render :show
     end
+  end
+
+  private
+  def user_params
+    params.require(:user).permit(:name, :user_id, :cpu_id, :mother_board_id, :memory_id, :videocard_id, :pc_case_id, :power_unit_id, :ssd_id, :cpu_cooler_id, :private)
   end
 end
